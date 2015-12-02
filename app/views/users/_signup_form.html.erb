@@ -1,0 +1,43 @@
+<%=form_for(@user) do |f| %>
+	<div class="field">
+    	<%= f.label :name %><br>
+    	<%= f.text_field :name %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :email %><br>
+    	<%= f.text_field :email %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :password %><br>
+    	<%= f.text_field :password %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :password_confirmation %><br>
+    	<%= f.text_field :password_confirmation %><br>
+  	</div>
+  	<hr>
+  	<div class="field">
+    	<%= f.label :phone %><br>
+    	<%= f.text_field :phone %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :address %><br>
+    	<%= f.text_field :address %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :city %><br>
+    	<%= f.text_field :city %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :state %><br>
+    	<%= f.text_field :state %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :zip %><br>
+    	<%= f.text_field :zip %><br>
+  	</div>
+  	<hr>
+  	<div class="actions">
+    	<%= f.submit "Sign Up"%>
+  	</div>
+<% end %>
