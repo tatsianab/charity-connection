@@ -14,6 +14,13 @@
 	- [x] order
 
 #Day 2:
+
+
+
+
+
+
+
+
 	- [] set up database
 	- [] migrate database
-	
