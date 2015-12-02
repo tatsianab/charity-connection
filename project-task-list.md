@@ -14,13 +14,6 @@
 	- [x] order
 
 #Day 2:
-
-
-
-
-
-
-
-
-	- [] set up database
-	- [] migrate database
+	- [X] set up database
+	- [X] migrate database
+	- [ ] set up validation
