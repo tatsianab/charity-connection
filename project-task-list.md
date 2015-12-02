@@ -16,4 +16,13 @@
 #Day 2:
 	- [X] set up database
 	- [X] migrate database
-	- [ ] set up validation
+	- [X] set up validation
+	- [X] set up User Resources
+	- [X] set up signup form
+
+#Day 3:
+
+- [] show page
+- [] Login upon signup
+- [] Edit page
+- [] Create listing resources
