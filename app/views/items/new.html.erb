@@ -1,0 +1,37 @@
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+
+<%=form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h4><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h4>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+<% end %>
+
+	<div class="field">
+    	<%= f.label :title %><br>
+    	<%= f.text_field :title %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :inventory %><br>
+    	<%= f.number_field :inventory %><br>
+  	</div>
+  	<div class="field">
+    	<%= f.label :description %><br>
+    	<%= f.text_field :description %><br>
+  	</div>
+  	
+	<hr>
+  	<div class="actions">
+    	<%= f.submit "Add An Item"%>
+  	</div>
+<% end %>
