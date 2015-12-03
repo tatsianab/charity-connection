@@ -31,6 +31,8 @@ gem 'better_errors'
 gem 'shoulda-matchers'
 gem 'capybara'
 gem 'pry'
+gem 'fabrication'
+gem 'faker'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
