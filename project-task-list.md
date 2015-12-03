@@ -24,21 +24,30 @@
 
 #Day 3:
 - [X] item and user test validation and associations
-- [] Edit item
 - [X] login page 
 - [X] Login upon signup
-- [] welcome page
-- [] cart controller
-- [] order page (upon successful cart submission)
+- [X] welcome page
+- [X] Edit item
+- [X] Delete item
+- [X] cart controller
+- [X] cart show page
 - [X] Create Item resources
-- [] business/charity permission
-- [] search controller? (maybe ember week)
+
+#Day 4:
+- [ ] Build header (login, logout, items, sign in, signup, cart, home, category)
+- [ ] destroy line item, cart, order
+- [ ] order controller
+- [ ] order history
+- [ ] order page (upon successful cart submission)
+- [ ] business/charity permission
+- [ ] revisit flow (with Lesly)
+- [ ] search controller? (maybe ember week)
 
 # Features
-- [] action-mailer
-- [] google maps
-- [] admin page -- Monday
-- [] routing constraints?
+- [ ] action-mailer
+- [ ] google maps
+- [ ] admin page -- Monday
+- [ ] routing constraints?
 
 #Ember & Javascript/Ajax
 - [] ajax for carts controller
