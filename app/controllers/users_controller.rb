@@ -3,6 +3,12 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
+	def show 
+		@user = User.find(params[:id])
+		rescue ActiveRecord::RecordNotFound
+ 			redirect_to new_user_path, :flash => { :error => "User not found." }
+	end
+
 	def create
 				@user = User.new(user_params)
 
@@ -12,13 +18,14 @@ class UsersController < ApplicationController
 						render 'new'
 
 				elsif @user.save
+							session[:user_id] = @user.id
 							if params['organization'] == 'business'
 								Business.create(user_id: @user.id)
 							elsif params['organization'] == 'charity'
 								Charity.create(user_id: @user.id)
 							end
 							# raise
-							redirect_to '/'
+							redirect_to @user
 				else
 							flash[:notice] 
 							render 'new'
