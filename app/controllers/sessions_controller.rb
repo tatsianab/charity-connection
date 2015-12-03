@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def index
 
   end
-  
+
   def new
   	render 'login'
   end
@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to user
     else
+      flash[:notice] = "Invalid username or password"
       render "login"
     end
   end

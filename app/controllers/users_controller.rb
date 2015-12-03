@@ -3,10 +3,12 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-	def show 
+	def show
 		@user = User.find(params[:id])
 		rescue ActiveRecord::RecordNotFound
- 			redirect_to new_user_path, :flash => { :error => "User not found." }
+			flash[:notice] = "User was not found, please login or sign up"
+			redirect_to new_user_path
+
 	end
 
 	def create
@@ -27,7 +29,7 @@ class UsersController < ApplicationController
 							# raise
 							redirect_to @user
 				else
-							flash[:notice] 
+							flash[:notice]
 							render 'new'
 				end
 	end
