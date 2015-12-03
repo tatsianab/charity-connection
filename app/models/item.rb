@@ -4,5 +4,5 @@ class Item < ActiveRecord::Base
 	delegate :cart, :to => :line_item
 	belongs_to :business
 
-	validates_presence_of :title, :inventory, :description, :business_id, :category_id
+	validates_presence_of :title, :inventory, :description, :category_id# :business_id
 end
