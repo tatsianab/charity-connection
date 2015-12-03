@@ -35,8 +35,8 @@
 
 #Day 4:
 - [X] Build header (login, logout, items, sign in, signup, cart, home, category)
-- [ ] destroy line item, cart, order
-- [ ] order controller
+- [X] destroy line item, cart, order
+- [ ] set up order controller
 - [ ] order history
 - [ ] order page (upon successful cart submission)
 - [ ] business/charity permission
