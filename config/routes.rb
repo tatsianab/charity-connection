@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   resources :items
   resources :categories
   root to: 'welcome#index' 
-  
+  resources :carts, except: [:show]
+  resources :line_items, only: [:create]
+  resources :orders, only: [:show]
+  post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
+  get '/carts/:id', to: 'carts#show', as: 'view_cart'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

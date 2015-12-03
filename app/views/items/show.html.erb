@@ -5,3 +5,4 @@
 <p>Description: <%= @item.description %></p>
 <p>Category: <%= @item.category.name %></p>
 <p><img src="<%=@item.photo_url%>"/></p>
+<%= button_to 'Add to Cart', line_items_path(item_id: @item) %>

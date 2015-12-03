@@ -1,0 +1,5 @@
+<h1>My cart</h1>
+<% @current_cart.line_items.each do |line_item| %>
+  <%= line_item.item.title %>
+  <%= line_item.item.inventory %>
+  <% end %>
