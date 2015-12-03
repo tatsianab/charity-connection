@@ -31,7 +31,6 @@
 - [] cart controller
 - [] order page (upon successful cart submission)
 - [] Create listing resources
--------------------------------------------------
 - [] business/charity permission
 - [] search controller? (maybe ember week)
 
