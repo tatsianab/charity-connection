@@ -25,4 +25,4 @@
 - [] show page
 - [] Login upon signup
 - [] Edit page
-- [] Create listing resources
+- [] Create item resources
