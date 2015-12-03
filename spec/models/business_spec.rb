@@ -4,11 +4,7 @@ RSpec.describe Business, type: :model do
 
 
 	describe '#has_items?' do
-		# let(:business) {FactoryGirl.build(:business, id: 1)}
-		# let(:item) {FactoryGirl.build(:item, business_id: business.id)}
-
-		# let(:item2) {FactoryGirl.build(:item, business_id: business.id)}
-
+		
 		context 'business associations' do
 			it 'has many items' do
 				@business = Business.create({user_id: 1})
