@@ -33,6 +33,8 @@ gem 'capybara'
 gem 'pry'
 gem 'fabrication'
 gem 'faker'
+gem 'rspec-rails', group: [:development, :test]
+gem "factory_girl_rails", "~> 4.0"
 
 # Use Unicorn as the app server
 # gem 'unicorn'
