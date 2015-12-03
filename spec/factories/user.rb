@@ -8,10 +8,4 @@ FactoryGirl.define do
 		city 'test_town'
 		state 'NY'
 	end
-	factory :business do
-		user_id 1
-	end
-	factory :charity do
-		user_id 1
-	end
 end
