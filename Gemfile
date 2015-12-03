@@ -34,6 +34,10 @@ gem 'pry'
 gem 'fabrication'
 gem 'faker'
 gem 'rspec-rails', group: [:development, :test]
+<<<<<<< HEAD
+=======
+gem "factory_girl_rails", "~> 4.0"
+>>>>>>> 23348ce921fea11790f8a33c82a73902ace2df7e
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -54,3 +58,4 @@ group :development do
   gem 'spring'
 end
 
+gem 'rspec-rails', group: [:development, :test]
