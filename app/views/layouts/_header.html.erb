@@ -1,0 +1,16 @@
+<div>
+<%= link_to "Log In", login_path %> |
+<%= link_to "Log Out",logout_path %> |
+
+<%= link_to 'items', items_path %> |
+
+<%= link_to 'sign up', signup_path  %> |
+
+<% if current_cart %>
+	<%= link_to 'view my cart', view_cart_path(current_cart)%> |
+<% end %>
+
+<%= link_to 'home', root_url %> |
+
+<%= link_to 'categories', categories_path %> |
+</div>
