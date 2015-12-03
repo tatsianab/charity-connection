@@ -23,14 +23,14 @@
 	- [X] sets up item new and show routes and views
 
 #Day 3:
-
+- [X] item and user test validation and associations
 - [] Edit item
-- [X] login page (A&L)
-- [X] Login upon signup (A&L)
+- [X] login page 
+- [X] Login upon signup
 - [] welcome page
 - [] cart controller
 - [] order page (upon successful cart submission)
-- [] Create listing resources
+- [X] Create Item resources
 - [] business/charity permission
 - [] search controller? (maybe ember week)
 
