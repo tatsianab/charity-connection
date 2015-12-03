@@ -38,7 +38,8 @@
 # Features
 - [] action-mailer
 - [] google maps
-- [] admin page
+- [] admin page -- Monday
+- [] routing constraints?
 
 #Ember & Javascript/Ajax
 - [] ajax for carts controller

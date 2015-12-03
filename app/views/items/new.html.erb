@@ -29,6 +29,10 @@
     	<%= f.label :description %><br>
     	<%= f.text_field :description %><br>
   	</div>
+    <div class="field">
+      <%= f.label :category %>
+      <%= collection_select(:item, :category_id, Category.order('name'), :id, :name) %>
+    </div>
   	
 	<hr>
   	<div class="actions">
