@@ -25,8 +25,8 @@
 #Day 3:
 
 - [] Edit item
-- [] login page
-- [] Login upon signup
+- [] login page (A&L)
+- [] Login upon signup (A&L)
 - [] welcome page
 - [] cart controller
 - [] order page (upon successful cart submission)
