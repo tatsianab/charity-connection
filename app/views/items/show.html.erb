@@ -1,4 +1,6 @@
-<h1><%= @item.title %></h1>
+<h1><%= @item.title %></h1> 
+<%= link_to 'edit', edit_item_path(@item) %> 
+<%= link_to 'delete', item_path(@item), method: :delete %>
 <p>Inventory: <%=@item.inventory%></p>
 <p>Description: <%= @item.description %></p>
 <p>Category: <%= @item.category.name %></p>

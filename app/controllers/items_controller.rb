@@ -19,9 +19,23 @@ class ItemsController < ApplicationController
 	end
 
 	def edit
+		 @item = Item.find(params[:id])
 	end
 
-	def delete
+	def update 
+    @item = Item.find(params[:id])
+		 if @item.update_attributes(item_params)
+		 	   redirect_to @item
+		 	else 
+		 	  flash[:notice] = "Sorry, we cant update this item" 
+        render 'edit'  
+      end
+	end	
+
+	def destroy
+		@item = Item.find(params[:id])
+		@item.destroy
+		redirect_to items_path
 	end
 
 	def show
