@@ -11563,3 +11563,83 @@ Completed 200 OK in 72ms (Views: 69.6ms | ActiveRecord: 0.6ms)
   [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 80], ["updated_at", "2015-12-03 16:02:15.105601"], ["id", 159]]
   [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
   [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+
+
+Started GET "/" for ::1 at 2015-12-03 11:03:19 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/NatalieColey/.rvm/gems/ruby-2.2.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.9ms)
+Completed 200 OK in 81ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items" for ::1 at 2015-12-03 11:03:21 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (1.6ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 554ms (Views: 481.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/items/150" for ::1 at 2015-12-03 11:03:41 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"150"}
+  [1m[36mItem Load (0.7ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 150]]
+  [1m[35mCategory Load (0.7ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered items/show.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 187ms (Views: 181.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/items/151" for ::1 at 2015-12-03 11:03:48 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"151"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 151]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered items/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/items" for ::1 at 2015-12-03 11:05:52 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 74ms (Views: 72.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-03 11:05:52 -0500
+
+
+Started GET "/items/150" for ::1 at 2015-12-03 11:06:00 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"150"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 150]]
+  [1m[36mCategory Load (0.4ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  Rendered items/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.6ms)
