@@ -11,6 +11,10 @@ Item.destroy_all
 Business.destroy_all
 Charity.destroy_all
 Category.destroy_all
+Cart.destroy_all
+LineItem.destroy_all
+Order.destroy_all
+
 
 Fabricator(:user) do 
     name { Faker::Name.name }

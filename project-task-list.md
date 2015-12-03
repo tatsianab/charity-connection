@@ -34,7 +34,7 @@
 - [X] Create Item resources
 
 #Day 4:
-- [ ] Build header (login, logout, items, sign in, signup, cart, home, category)
+- [X] Build header (login, logout, items, sign in, signup, cart, home, category)
 - [ ] destroy line item, cart, order
 - [ ] order controller
 - [ ] order history
