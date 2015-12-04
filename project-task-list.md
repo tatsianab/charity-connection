@@ -42,7 +42,7 @@
 - [ ] business/charity permission
 - [ ] revisit flow (with Lesly)
 ---------
-- [] remove extra button tag in order page
+- [X] remove extra button tag in order page
 - [] add business hidden field to item
 - [] show items that business has submitted
 - [] deleting items after order is successfull
