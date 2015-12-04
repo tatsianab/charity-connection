@@ -4,12 +4,14 @@ module CartsHelper
      unless session[:cart_id]
             cart = Cart.create
             session[:cart_id] = cart.id
-    end
+     end
         cart = Cart.find(session[:cart_id])
  	end
 
  	def current_cart
- 		cart ||= Cart.find(session[:cart_id])
+ 		if session[:cart_id] != nil
+ 			cart ||= Cart.find(session[:cart_id])
+ 		end
  	end
 
 end

@@ -69,6 +69,6 @@
 This Weekend:
 Tatiana: action-mailer
 Austin: google maps
-Natalie: admin page
+Natalie: fix cart/checkout system + begin admin page
 Lesley: Search controller
 
