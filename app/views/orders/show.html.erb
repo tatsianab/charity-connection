@@ -1,0 +1,6 @@
+Your Order Has Been Submitted
+
+<p><%= @charity.user.name %></p>
+<% @cart.items.each do |item| %>
+<p><%= item.title %></p>
+<% end %>

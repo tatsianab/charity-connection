@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'welcome#index' 
   resources :carts, except: [:show]
   resources :line_items, only: [:create]
-  resources :orders, only: [:show]
+  resources :orders
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
   get '/carts/:id', to: 'carts#show', as: 'view_cart'
 
