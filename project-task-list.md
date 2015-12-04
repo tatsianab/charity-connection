@@ -36,19 +36,39 @@
 #Day 4:
 - [X] Build header (login, logout, items, sign in, signup, cart, home, category)
 - [X] destroy line item, cart, order
-- [ ] set up order controller
+- [X] set up order controller
 - [ ] order history
-- [ ] order page (upon successful cart submission)
+- [X] order page (upon successful cart submission)
 - [ ] business/charity permission
 - [ ] revisit flow (with Lesly)
-- [ ] search controller? (maybe ember week)
+---------
+- [] remove extra button tag in order page
+- [] add business hidden field to item
+- [] show items that business has submitted
+- [] deleting items after order is successfull
+- [] fix errors with submitting blank forms
 
 # Features
 - [ ] action-mailer
+	- [] send one email to charity upon order confirmation
+	- [] send one email to business after charity has accepted their item
 - [ ] google maps
+	-[] add map of business location to items index
+	-[] add google maps to charity/business home pages
+	-[] add google maps to order success page showing order locations
 - [ ] admin page -- Monday
-- [ ] routing constraints?
+- [ ] search controller? (maybe ember week)
 
 #Ember & Javascript/Ajax
 - [] ajax for carts controller
 - [] lazy loader
+
+#Refactoring
+- [ ] routing constraints?
+
+This Weekend:
+Tatiana: action-mailer
+Austin: google maps
+Natalie: admin page
+Lesley: Search controller
+
