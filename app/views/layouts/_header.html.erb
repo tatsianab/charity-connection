@@ -1,18 +1,20 @@
-<div>
-<%= link_to "Log In", login_path %> |
-<%= link_to "Log Out",logout_path %> |
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+	<%= link_to "Log In", login_path %> |
+	<%= link_to "Log Out",logout_path %> |
 
-<%= link_to 'items', items_path %> |
+	<%= link_to 'items', items_path %> |
 
-<%= link_to 'sign up', signup_path  %> |
+	<%= link_to 'sign up', signup_path  %> |
 
-<% if current_cart %>
-	<%= link_to 'view my cart', view_cart_path(current_cart)%> |
-<% end %>
+	<% if current_cart %>
+		<%= link_to 'view my cart', view_cart_path(current_cart)%> |
+	<% end %>
 
-<%= link_to 'home', root_url %> |
+	<%= link_to 'home', root_url %> |
 
-<%= link_to 'categories', categories_path %> |
+	<%= link_to 'My Profile', user_path(161) %>
 
-<%= link_to 'My Profile', user_path(161) %>
-</div>
+	<%= link_to 'categories', categories_path %>
+  </div>
+</nav>
