@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		@user = User.where(id: params[:id])
-		if @user.empty?
+		@user = User.find_by_id(params[:id])
+		if @user.nil?
 			flash[:notice] = "User was not found, please login or sign up"
 			redirect_to signup_path
 		end
