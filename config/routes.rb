@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
   get '/carts/:id', to: 'carts#show', as: 'view_cart'
 
-  get '/login', to: 'sessions#new', as: "login"
-  get '/logout', to: 'sessions#destroy', as: "logout"
-  post '/sessions', to: 'sessions#create', as: "post_login"
+  get '/login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy'
+  post '/login', to: 'sessions#create'
 
   get '/signup', to: 'users#new', as: "signup"
 

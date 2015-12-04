@@ -1,15 +1,15 @@
-<%=form_tag post_login_path do %>
+<%=form_for(:session, url: login_path) do |f|%>
 
   	<div class="field">
-    	<%= label_tag :email %><br>
-    	<%= email_field_tag :email %><br>
+    	<%= f.label :email %><br>
+    	<%= f.email_field :email %><br>
   	</div>
   	<div class="field">
-    	<%= label_tag :password %><br>
-    	<%= password_field_tag :password %><br>
+    	<%= f.label :password %><br>
+    	<%= f.password_field :password %><br>
   	</div>
     <hr>
     <div class="actions">
-      <%= submit_tag "Sign In"%>
+      <%= f.submit "Sign In"%>
     </div>
 <% end %>
