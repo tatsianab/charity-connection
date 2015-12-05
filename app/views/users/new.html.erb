@@ -17,22 +17,22 @@
 
 	<div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name%><br>
+    <%= f.text_field :name, required: true%><br>
   </div>
 
   <div class="field form-group">
   	<%= f.label :email %><br>
-  	<%= f.email_field :email, placeholder: "Email"%><br>
+  	<%= f.email_field :email, placeholder: "Email", required: true%><br>
 	</div>
 
 	<div class="field form-group">
   	<%= f.label :password %><br>
-  	<%= f.password_field :password, placeholder: "Password"%><br>
+  	<%= f.password_field :password, placeholder: "Password", required: true%><br>
 	</div>
 
 	<div class="field form-group">
   	<%= f.label :password_confirmation %><br>
-  	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation"%><br>
+  	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", required: true%><br>
 	</div>
 
   <hr>
@@ -48,27 +48,27 @@
 
 	<div class="field form-group">
   	<%= f.label :phone %><br>
-  	<%= f.telephone_field :phone%><br>
+  	<%= f.telephone_field :phone, required: true%><br>
 	</div>
 
 	<div class="field form-group">
   	<%= f.label :address %><br>
-  	<%= f.text_field :address%><br>
+  	<%= f.text_field :address, required: true%><br>
 	</div>
 
 	<div class="field form-group">
   	<%= f.label :city %><br>
-  	<%= f.text_field :city%><br>
+  	<%= f.text_field :city, required: true%><br>
 	</div>
 
 	<div class="field form-group">
   	<%= f.label :state %><br>
-  	<%= f.text_field :state%><br>
+  	<%= f.text_field :state, required: true%><br>
 	</div>
 
 	<div class="field form-grou">
   	<%= f.label :zip %><br>
-  	<%= f.text_field :zip%><br>
+  	<%= f.text_field :zip, required: true%><br>
 	</div>
 
   <br>
