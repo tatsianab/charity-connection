@@ -1,5 +1,8 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
+
+  	<%= link_to 'Home', root_url %> |
+
   	<% if current_user %>
   		<%= link_to 'My Profile', user_path(current_user) %> |
   		<%= link_to "Log Out", logout_path %> |
@@ -14,8 +17,6 @@
 	
 	<%= link_to 'View Items', items_path %> |
 
-	<%= link_to 'Home', root_url %> |
-
-	<%= link_to 'Categories', categories_path %>
+	<%= link_to 'View Categories', categories_path %>
   </div>
 </nav>
