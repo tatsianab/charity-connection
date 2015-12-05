@@ -39,10 +39,7 @@
 
   <div class="field form-group">
    <p><span id="helpBlock" class="help-block">Are you a business or charity?</p>
-    <%= f.label :business %>
-     <%= radio_button_tag 'organization', 'business'%>
-     <%= f.label :charity %>
-     <%= radio_button_tag 'organization', 'charity'%>
+    <%= select_tag(:organization, options_from_collection_for_select(@organization, :to_s, :to_s), {class: "btn btn-default", required: true})%>
    </span>
   </div>
 

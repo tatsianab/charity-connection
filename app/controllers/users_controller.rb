@@ -1,36 +1,27 @@
 class UsersController < ApplicationController
 	def new
 		@user = User.new
+		@organization = ['Business', 'Charity']
 	end
+
+	def create
+	    @user = User.new(user_params)
+	    if @user.save
+	       log_in(@user)
+	       redirect_to @user
+	    else
+	       render 'new'
+	    end
+  	end
 
 	def show
 		@user = User.find_by_id(params[:id])
+
 		if @user.nil?
 			flash[:notice] = "User was not found, please login or sign up"
 			redirect_to signup_path
 		end
 
-	end
-
-	def create
-		user = User.new(user_params)
-
-		if !params['organization']
-			flash[:notice] = "Please select organization"
-			render 'new'
-
-		elsif user.save
-			session[:user_id] = user.id
-			if params['organization'] == 'business'
-				Business.create(user_id: user.id)
-			elsif params['organization'] == 'charity'
-				Charity.create(user_id: user.id)
-			end
-			redirect_to user
-		else
-			flash[:notice]
-			render 'new'
-		end
 	end
 
 	private
