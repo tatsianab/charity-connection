@@ -1,1 +1,2 @@
-<h1>Welcome <%= @user.name ? @user.name : 'guest' %>
+<%= render '/layouts/user_welcome', local:@user %>
+<%= render '/layouts/user_info', local:@user %>
