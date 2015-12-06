@@ -38,6 +38,9 @@ charity_range = (5..9).to_a
 	Charity.create(user_id: User.all[charity_range.pop].id)
 end
 
+User.create(name: 'Admin', email: 'admin@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '212-870-2578')
+Admin.create(user_id: User.all[10].id)
+
 Category.create(name: 'food', id: 1)
 Category.create(name: 'electronics', id: 2)
 Category.create(name: 'furniture', id: 3)
