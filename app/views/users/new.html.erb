@@ -1,74 +1,7 @@
 <%=form_for(@user) do |f| %>
 
-  <div class="field form-errors">
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <h4><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h4>
-
-        <ul>
-        <% @user.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-
-      </div>
-  <% end %>
-  </div>
-
-	<div class="field form-group">
-    <%= f.label :name %><br>
-    <%= f.text_field :name, placeholder: "Organization Name", required: true%><br>
-  </div>
-
-  <div class="field form-group">
-  	<%= f.label :email %><br>
-  	<%= f.email_field :email, placeholder: "Email", required: true%><br>
-	</div>
-
-	<div class="field form-group">
-  	<%= f.label :password %><br>
-  	<%= f.password_field :password, placeholder: "Password", required: true%><br>
-	</div>
-
-	<div class="field form-group">
-  	<%= f.label :password_confirmation %><br>
-  	<%= f.password_field :password_confirmation, placeholder: "Password Confirmation", required: true%><br>
-	</div>
-
-  <hr>
-
-  <div class="field form-group">
-   <p><span id="helpBlock" class="help-block">Are you a business or charity?</p>
-    <%= select_tag(:organization, options_from_collection_for_select(@organization, :to_s, :to_s), {class: "btn btn-default", required: true})%>
-   </span>
-  </div>
-
-	<div class="field form-group">
-  	<%= f.label :phone %><br>
-  	<%= f.telephone_field :phone, required: true%><br>
-	</div>
-
-	<div class="field form-group">
-  	<%= f.label :address %><br>
-  	<%= f.text_field :address, required: true%><br>
-	</div>
-
-	<div class="field form-group">
-  	<%= f.label :city %><br>
-  	<%= f.text_field :city, required: true%><br>
-	</div>
-
-	<div class="field form-group">
-  	<%= f.label :state %><br>
-  	<%= f.text_field :state, required: true%><br>
-	</div>
-
-	<div class="field form-grou">
-  	<%= f.label :zip %><br>
-  	<%= f.text_field :zip, required: true%><br>
-	</div>
-
-  <br>
+  <%= render partial: 'form_errors', locals: {f: f} %>
+  <%= render partial: 'form_get_organization_name', locals: {f: f} %>
 
 	<div class="actions">
   	<%= f.submit "Sign Up", :class => "btn btn-default"%>

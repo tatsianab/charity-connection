@@ -1,0 +1,9 @@
+<%=form_for(@user) do |f| %>
+
+  <%= render partial: 'form', locals: {f: f} %>
+  
+	<div class="actions">
+  	<%= f.submit "Edit", :class => "btn btn-default"%>
+	</div>
+
+<% end %>
