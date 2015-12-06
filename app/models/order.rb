@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
 		self.save
 	end
 
-	def change_inventory
+	def change_inventory(cart)
 		cart.items.each do |item|
 			item = Item.find(item.id)
 			item.inventory -=1

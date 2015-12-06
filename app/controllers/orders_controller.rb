@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 
 		if @order
 			session.delete(:cart_id)
-			@cart.destroy
+			@order.change_inventory(@cart)
 			@order.change_order_status
 			redirect_to @user
 		else
