@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 		@user = User.find(session[:user_id])
 		@charity = @user.charity
 		@cart = Cart.find_by(charity_id: @charity.id)
-		@order = Order.create_from_cart(@cart)
+		@order = Order.create_from_cart(@cart, @charity)
 
 		if @order
 			@order.change_order_status
