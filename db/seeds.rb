@@ -15,15 +15,16 @@ Cart.destroy_all
 LineItem.destroy_all
 Order.destroy_all
 
+streets = ["Broadway", "1st Ave", "Lenox Ave", "5th Ave", "Amsterdam Ave"]
 
 Fabricator(:user) do 
     name { Faker::Name.name }
     email {Faker::Internet.email}
     password { "test"}
     password_confirmation { |attrs| attrs[:password] }
-    address {Faker::Address.street_name}
-    city {Faker::Address.city}
-    state {Faker::Address.state}
+    address {rand(1..1000).to_s + ' ' + streets.sample}
+    city {"New York City"}
+    state {"New York"}
     zip {Faker::Address.zip}
     phone {Faker::PhoneNumber.phone_number}
 end
