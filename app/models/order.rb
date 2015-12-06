@@ -9,6 +9,7 @@ class Order < ActiveRecord::Base
 
 	def change_order_status
 		self.status = "submitted"
+		self.save
 	end
 
 	def change_inventory
@@ -18,4 +19,5 @@ class Order < ActiveRecord::Base
 			item.save
 		end
 	end
+
 end

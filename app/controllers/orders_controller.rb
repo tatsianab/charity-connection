@@ -14,16 +14,18 @@ class OrdersController < ApplicationController
 		@order = Order.create_from_cart(@cart, @charity)
 
 		if @order
+			session.delete(:cart_id)
+			@cart.destroy
 			@order.change_order_status
-			redirect_to @order
+			redirect_to @user
+		else
+			flash[:notice] = "I'm sorry, this order could not be checkout out."
 		end
 	end
 
 	def show
 		@user = User.find(session[:user_id])
-		@charity = @user.charity
-		@cart = Cart.find_by(charity_id: @charity.id)
-		@order = Order.where(cart_id: @cart.id)
+		@orders = @user.charity.orders
 	end
 
 	private
