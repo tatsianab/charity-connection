@@ -2,7 +2,7 @@ module CartsHelper
 
 	def initialize_cart
      	unless session[:cart_id]
-     		charity = Charity.find_by(current_user.id)
+     		charity = Charity.find_by(user_id: 295)
             cart = Cart.create(charity_id: charity.id)
             session[:cart_id] = cart.id
      	end
