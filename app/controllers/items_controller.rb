@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
 	def index
-		@items = Item.all
+			  @items = Item.all
 	end
 
 	def new
@@ -22,15 +22,15 @@ class ItemsController < ApplicationController
 		 @item = Item.find(params[:id])
 	end
 
-	def update 
+	def update
     	@item = Item.find(params[:id])
 			if @item.update_attributes(item_params)
 		 	   redirect_to @item
-		 	else 
-		 		flash[:notice] = "Sorry, we cant update this item" 
-        		render 'edit'  
+		 	else
+		 		flash[:notice] = "Sorry, we cant update this item"
+        		render 'edit'
       		end
-	end	
+	end
 
 	def destroy
 		@item = Item.find(params[:id])
@@ -47,4 +47,5 @@ class ItemsController < ApplicationController
 	def item_params
 		params.require(:item).permit(:title, :inventory, :description, :business_id, :photo_url, :category_id)
 	end
+
 end

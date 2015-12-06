@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :show]
   resources :items
   resources :categories
-  root to: 'welcome#index' 
+  root to: 'welcome#index'
   resources :carts, except: [:show]
   resources :line_items, only: [:create]
   resources :orders
+  resources :search, only: [:index]
+
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
   get '/carts/:id', to: 'carts#show', as: 'view_cart'
 

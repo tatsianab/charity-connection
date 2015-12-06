@@ -5,4 +5,6 @@ class Item < ActiveRecord::Base
 	belongs_to :business
 
 	validates_presence_of :title, :inventory, :description, :category_id# :business_id
+
+
 end

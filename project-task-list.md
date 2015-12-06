@@ -24,7 +24,7 @@
 
 #Day 3:
 - [X] item and user test validation and associations
-- [X] login page 
+- [X] login page
 - [X] Login upon signup
 - [X] welcome page
 - [X] Edit item
@@ -45,7 +45,7 @@
 - [X] remove extra button tag in order page
 - [] add business hidden field to item
 - [] show items that business has submitted
-- [] deleting items after order is successfull
+- [] deleting items after order is successful
 - [] fix errors with submitting blank forms
 
 # Features
@@ -57,7 +57,7 @@
 	-[] add google maps to charity/business home pages
 	-[] add google maps to order success page showing order locations
 - [ ] admin page -- Monday
-- [ ] search controller? (maybe ember week)
+- [X] search controller? (maybe ember week)
 
 #Ember & Javascript/Ajax
 - [] ajax for carts controller
@@ -71,4 +71,3 @@ Tatiana: action-mailer
 Austin: google maps
 Natalie: admin page
 Lesley: Search controller
-
