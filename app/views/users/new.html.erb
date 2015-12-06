@@ -2,6 +2,13 @@
 
   <%= render partial: 'form_errors', locals: {f: f} %>
   <%= render partial: 'form_get_organization_name', locals: {f: f} %>
+  <%= render partial: 'form_account_info', locals: {f: f} %>
+
+  <hr>
+
+  <%= render partial: 'form_organization_account_info', locals: {f: f} %>
+  
+  <br>
 
 	<div class="actions">
   	<%= f.submit "Sign Up", :class => "btn btn-default"%>
