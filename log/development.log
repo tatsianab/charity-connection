@@ -25757,3 +25757,2244 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-06 23:15:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 395]]
+  [1m[36m (72.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1325.8ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'admins'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'businesses'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'carts'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'categories'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'charities'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.9ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'line_items'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (2.0ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'orders'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 396]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 397]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 398]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 399]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 400]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 401]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 402]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 403]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 404]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 406]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 407]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 405]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 408]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 409]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 410]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mItem Load (0.8ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 361]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 362]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 363]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 350]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 351]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 352]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 353]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 354]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 355]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 356]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 357]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 358]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 359]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mBusiness Load (0.9ms)[0m  SELECT "businesses".* FROM "businesses"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 189]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 190]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 191]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (10.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 192]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 193]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 194]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 195]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 196]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mCharity Load (0.7ms)[0m  [1mSELECT "charities".* FROM "charities"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 196]]
+  [1m[35m (15.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 197]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 198]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 199]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 200]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 201]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 202]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[35m (14.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mCart Load (0.6ms)[0m  SELECT "carts".* FROM "carts"
+  [1m[36mLineItem Load (13.5ms)[0m  [1mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = $1  [["id", 25]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = $1  [["id", 27]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.7ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 12]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "orders" WHERE "orders"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 14]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT "admins".* FROM "admins"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "admins" WHERE "admins"."id" = $1  [["id", 4]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Monty Durgan"], ["email", "viva_vonrueden@leuschkeokuneva.net"], ["password_digest", "$2a$10$TBKpu02fa7nhwFGneLfY0uJdtMGTsjX2U.LtQbM9A6Kf2F.3r90di"], ["address", "Stanton Groves"], ["city", "Port Joaquin"], ["state", "Colorado"], ["zip", "70766-6862"], ["phone", "167.565.2922 x054"], ["created_at", "2015-12-07 04:31:00.998806"], ["updated_at", "2015-12-07 04:31:00.998806"]]
+  [1m[35m (15.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Ana Price"], ["email", "hyman@metz.io"], ["password_digest", "$2a$10$zdDLwDVsU1s9U2HfeX/B.eDIJ.NcWpsYRn/uLc1kHIttEP2CT2jKC"], ["address", "Brady Passage"], ["city", "Stokesshire"], ["state", "Mississippi"], ["zip", "60052"], ["phone", "709.352.0747 x438"], ["created_at", "2015-12-07 04:31:01.125834"], ["updated_at", "2015-12-07 04:31:01.125834"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Diana Dibbert"], ["email", "kameron@altenwerth.name"], ["password_digest", "$2a$10$lV7jZ1z/iOCQBkCirlSDc.arm/DJY6y43S46pLdxA.tqRAXKSL0cO"], ["address", "Runte Streets"], ["city", "Goodwinhaven"], ["state", "Arkansas"], ["zip", "69279-5111"], ["phone", "1-362-306-7876"], ["created_at", "2015-12-07 04:31:01.212708"], ["updated_at", "2015-12-07 04:31:01.212708"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Gudrun Bayer"], ["email", "noe.bednar@reingerokuneva.biz"], ["password_digest", "$2a$10$9gbtDvSBFQqIzmlAkuarN.lW9wKCkHrbHWQa1zQyPbjmUTr9uWIDK"], ["address", "Giovanny Orchard"], ["city", "New Talon"], ["state", "Minnesota"], ["zip", "14408-9785"], ["phone", "309.317.9266"], ["created_at", "2015-12-07 04:31:01.296212"], ["updated_at", "2015-12-07 04:31:01.296212"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Frankie Homenick"], ["email", "eleonore@langworthgreenfelder.name"], ["password_digest", "$2a$10$40etQIHTkbwKTsewSMT2FOmX..//kUSkLOZLDmaBsi9SQptq/Tuai"], ["address", "Araceli Radial"], ["city", "West Madgeburgh"], ["state", "Washington"], ["zip", "57581"], ["phone", "(437) 632-7088"], ["created_at", "2015-12-07 04:31:01.383283"], ["updated_at", "2015-12-07 04:31:01.383283"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Alfredo Ebert PhD"], ["email", "kyla.abshire@kunze.com"], ["password_digest", "$2a$10$gxI.nFijanSi1EII3FqmoOKfBhFullHDpwEPInAPT/ev6BHc5EvQW"], ["address", "Boyer Way"], ["city", "Port Flo"], ["state", "Nevada"], ["zip", "87153-5091"], ["phone", "(913) 283-6250"], ["created_at", "2015-12-07 04:31:01.466946"], ["updated_at", "2015-12-07 04:31:01.466946"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "David Heathcote"], ["email", "reed_breitenberg@littel.org"], ["password_digest", "$2a$10$JsTQr6QbXgVLkCI.KEjW4u3wNeQ58W2p90k9p/Di0GG2XlAzk/v8."], ["address", "Laverna Way"], ["city", "Port Shyanne"], ["state", "Wyoming"], ["zip", "57913-7822"], ["phone", "(345) 419-1031"], ["created_at", "2015-12-07 04:31:01.545639"], ["updated_at", "2015-12-07 04:31:01.545639"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Arely Hermann MD"], ["email", "joannie.hand@wehnerbins.org"], ["password_digest", "$2a$10$4HU5A5zE8Q7yMhh7tVRDO.1QXKb.sEGfyuFAJmIY8dUl5aTi2lGhW"], ["address", "Madison Station"], ["city", "West Deangelobury"], ["state", "North Dakota"], ["zip", "82870"], ["phone", "(801) 292-5329"], ["created_at", "2015-12-07 04:31:01.632137"], ["updated_at", "2015-12-07 04:31:01.632137"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Esther Davis"], ["email", "zachary_stroman@medhurst.io"], ["password_digest", "$2a$10$0jewjyp3RpFEg.qWiesqbOYL7gRGM/GDO.aKEvJbQba.BY952MDVq"], ["address", "Schmidt Road"], ["city", "Jastburgh"], ["state", "South Carolina"], ["zip", "93588"], ["phone", "1-525-504-7791 x805"], ["created_at", "2015-12-07 04:31:01.715465"], ["updated_at", "2015-12-07 04:31:01.715465"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Henri Hauck"], ["email", "elsa@dickinson.org"], ["password_digest", "$2a$10$2HBPbUppujG6zhBQyWP1EevPEd.yLzXC9Y3qpt2xDd6VnSTn9BaHe"], ["address", "Bert Radial"], ["city", "North Oswaldshire"], ["state", "Oregon"], ["zip", "67189"], ["phone", "605-360-7409 x2044"], ["created_at", "2015-12-07 04:31:01.800779"], ["updated_at", "2015-12-07 04:31:01.800779"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 415], ["created_at", "2015-12-07 04:31:01.806383"], ["updated_at", "2015-12-07 04:31:01.806383"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 420], ["created_at", "2015-12-07 04:31:01.811286"], ["updated_at", "2015-12-07 04:31:01.811286"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 414], ["created_at", "2015-12-07 04:31:01.815032"], ["updated_at", "2015-12-07 04:31:01.815032"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 419], ["created_at", "2015-12-07 04:31:01.818517"], ["updated_at", "2015-12-07 04:31:01.818517"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 413], ["created_at", "2015-12-07 04:31:01.821753"], ["updated_at", "2015-12-07 04:31:01.821753"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 418], ["created_at", "2015-12-07 04:31:01.824983"], ["updated_at", "2015-12-07 04:31:01.824983"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 412], ["created_at", "2015-12-07 04:31:01.828553"], ["updated_at", "2015-12-07 04:31:01.828553"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 417], ["created_at", "2015-12-07 04:31:01.831978"], ["updated_at", "2015-12-07 04:31:01.831978"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 411], ["created_at", "2015-12-07 04:31:01.835281"], ["updated_at", "2015-12-07 04:31:01.835281"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 416], ["created_at", "2015-12-07 04:31:01.838560"], ["updated_at", "2015-12-07 04:31:01.838560"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Admin"], ["email", "admin@gmail.com"], ["password_digest", "$2a$10$Q3PY7jqlkYoksHI.8/WOTOT1t9zsmN5iX/mHPnEInXt8oQeGoSPem"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:31:01.921166"], ["updated_at", "2015-12-07 04:31:01.921166"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (18.0ms)[0m  [1mINSERT INTO "admins" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 420], ["created_at", "2015-12-07 04:31:01.926939"], ["updated_at", "2015-12-07 04:31:01.926939"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Flatiron Charity"], ["email", "charity@gmail.com"], ["password_digest", "$2a$10$WJ91D513efswf8GwmGY3yOp41Lk7Omj0.kcHyiwbdKNMeGPKIyLr2"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:31:02.032449"], ["updated_at", "2015-12-07 04:31:02.032449"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 420], ["created_at", "2015-12-07 04:31:02.037184"], ["updated_at", "2015-12-07 04:31:02.037184"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Flatiron Business"], ["email", "business@gmail.com"], ["password_digest", "$2a$10$.0U1zYJZWD.Uc5R08q2rk.u52Vn/eh61hqgZfE5TOqp0zk.8u1m4S"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:31:02.121285"], ["updated_at", "2015-12-07 04:31:02.121285"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 423], ["created_at", "2015-12-07 04:31:02.126181"], ["updated_at", "2015-12-07 04:31:02.126181"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "food"], ["id", 1], ["admin_id", 5], ["created_at", "2015-12-07 04:31:02.131764"], ["updated_at", "2015-12-07 04:31:02.131764"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "electronics"], ["id", 2], ["admin_id", 5], ["created_at", "2015-12-07 04:31:02.135785"], ["updated_at", "2015-12-07 04:31:02.135785"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "furniture"], ["id", 3], ["admin_id", 5], ["created_at", "2015-12-07 04:31:02.138941"], ["updated_at", "2015-12-07 04:31:02.138941"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "clothes"], ["id", 4], ["admin_id", 5], ["created_at", "2015-12-07 04:31:02.142591"], ["updated_at", "2015-12-07 04:31:02.142591"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Practical Granite Coat"], ["inventory", 18], ["description", "cultivate user-centric e-markets"], ["category_id", 3], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.145983"], ["updated_at", "2015-12-07 04:31:02.145983"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Gorgeous Wooden Table"], ["inventory", 12], ["description", "iterate efficient communities"], ["category_id", 2], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.149685"], ["updated_at", "2015-12-07 04:31:02.149685"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Awesome Plastic Car"], ["inventory", 2], ["description", "evolve sexy architectures"], ["category_id", 3], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.152779"], ["updated_at", "2015-12-07 04:31:02.152779"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Small Leather Clock"], ["inventory", 14], ["description", "recontextualize wireless e-services"], ["category_id", 3], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.155850"], ["updated_at", "2015-12-07 04:31:02.155850"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Durable Paper Computer"], ["inventory", 17], ["description", "redefine customized initiatives"], ["category_id", 1], ["business_id", 3], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.159187"], ["updated_at", "2015-12-07 04:31:02.159187"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Heavy Duty Silk Gloves"], ["inventory", 18], ["description", "benchmark enterprise applications"], ["category_id", 1], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.163119"], ["updated_at", "2015-12-07 04:31:02.163119"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Sleek Bronze Bench"], ["inventory", 14], ["description", "morph innovative content"], ["category_id", 2], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.167093"], ["updated_at", "2015-12-07 04:31:02.167093"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Rustic Bronze Table"], ["inventory", 9], ["description", "leverage frictionless models"], ["category_id", 1], ["business_id", 1], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.170879"], ["updated_at", "2015-12-07 04:31:02.170879"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Intelligent Rubber Lamp"], ["inventory", 16], ["description", "deploy intuitive relationships"], ["category_id", 3], ["business_id", 3], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.174433"], ["updated_at", "2015-12-07 04:31:02.174433"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Aerodynamic Silk Pants"], ["inventory", 12], ["description", "synergize 24/365 niches"], ["category_id", 3], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:31:02.178065"], ["updated_at", "2015-12-07 04:31:02.178065"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mBusiness Load (0.5ms)[0m  [1mSELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" ASC LIMIT 1[0m
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" DESC LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 198], ["updated_at", "2015-12-07 04:31:02.196277"], ["id", 364]]
+  [1m[35m (15.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 200], ["updated_at", "2015-12-07 04:31:02.237650"], ["id", 365]]
+  [1m[36m (15.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 198], ["updated_at", "2015-12-07 04:31:02.257217"], ["id", 366]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 199], ["updated_at", "2015-12-07 04:31:02.261116"], ["id", 367]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 198], ["updated_at", "2015-12-07 04:31:02.264550"], ["id", 368]]
+  [1m[35m (1024.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 202], ["updated_at", "2015-12-07 04:31:03.292468"], ["id", 369]]
+  [1m[36m (15.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 199], ["updated_at", "2015-12-07 04:31:03.311145"], ["id", 370]]
+  [1m[35m (5.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 201], ["updated_at", "2015-12-07 04:31:03.319186"], ["id", 371]]
+  [1m[36m (12.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 202], ["updated_at", "2015-12-07 04:31:03.335123"], ["id", 372]]
+  [1m[35m (10.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 202], ["updated_at", "2015-12-07 04:31:03.349132"], ["id", 373]]
+  [1m[36m (13.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2015-12-06 23:32:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (24.2ms)
+  Rendered layouts/_flashmessages.html.erb (1.5ms)
+Completed 200 OK in 3633ms (Views: 3610.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:32:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-06 23:32:48 -0500
+
+
+Started GET "/login" for ::1 at 2015-12-06 23:32:50 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (614.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.7ms)
+Completed 200 OK in 784ms (Views: 782.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 23:32:59 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bjekhEWqWjqPst5Et0ZpTp9Bif4hqA5BtRAxvN3oQKJJYNT4oTpbTDreHK6bH1sQRMZ7aQ5cP2YZYjq0O7nNxQ==", "session"=>{"email"=>"charity@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "charity@gmail.com"]]
+Redirected to http://localhost:3000/users/422
+Completed 302 Found in 123ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/422" for ::1 at 2015-12-06 23:32:59 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"422"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 422]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 422]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mBusiness Load (0.5ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  Rendered layouts/_header.html.erb (60.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 195ms (Views: 185.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/users/422" for ::1 at 2015-12-06 23:34:15 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"422"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 422]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 422]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mCharity Load (0.4ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  [1m[35mBusiness Load (0.4ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 117.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:34:16 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.8ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (12.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 422]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  Rendered layouts/_header.html.erb (6.3ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 168.2ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/items/364" for ::1 at 2015-12-06 23:34:17 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"364"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 364]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 422]]
+  [1m[35mBusiness Load (0.4ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  Rendered items/show.html.erb within layouts/application (41.5ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 181ms (Views: 175.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/items/364" for ::1 at 2015-12-06 23:36:31 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"364"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 364]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 422]]
+  [1m[35mCharity Load (0.4ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mCharity Load (0.6ms)[0m  [1mSELECT  "charities".* FROM "charities"  ORDER BY "charities"."id" DESC LIMIT 1[0m
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 422]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 422]]
+  [1m[35mCategory Load (0.4ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered items/show.html.erb within layouts/application (36.7ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.3ms)
+Completed 200 OK in 70491ms (Views: 164.3ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-06 23:37:42 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 421]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 422]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 411]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 412]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 413]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 414]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 415]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 416]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 417]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 418]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 419]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 420]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 423]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 364]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 365]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 366]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 367]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 368]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 369]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 370]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 371]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 372]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 373]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mBusiness Load (1.0ms)[0m  [1mSELECT "businesses".* FROM "businesses"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 197]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 198]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 199]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 200]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 201]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 202]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCharity Load (0.8ms)[0m  SELECT "charities".* FROM "charities"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 203]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 204]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 205]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 206]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 207]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 208]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mCategory Load (0.8ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 2]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 4]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCart Load (0.7ms)[0m  SELECT "carts".* FROM "carts"
+  [1m[36mLineItem Load (0.9ms)[0m  [1mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35mOrder Load (0.6ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mAdmin Load (0.8ms)[0m  [1mSELECT "admins".* FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Sam Carroll"], ["email", "camryn_gibson@lindgren.co"], ["password_digest", "$2a$10$uN56ktc1U6FUynpAWDL.9OsynE8gpPlt0AwX9KBGtWSaDUM7a5GGm"], ["address", "Collier Avenue"], ["city", "Michealfort"], ["state", "Washington"], ["zip", "49536-2272"], ["phone", "1-860-486-5560 x56399"], ["created_at", "2015-12-07 04:38:00.010472"], ["updated_at", "2015-12-07 04:38:00.010472"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Milford Langworth"], ["email", "johathan@botsfordgreen.net"], ["password_digest", "$2a$10$UlY2M6oWDNIxHQcu4LCn/ubT7BIGAyW1Q9vtdxusjXOXj61u/t3Lq"], ["address", "Nellie Circles"], ["city", "Hintzmouth"], ["state", "New Hampshire"], ["zip", "59297"], ["phone", "1-215-382-2796 x29254"], ["created_at", "2015-12-07 04:38:00.124750"], ["updated_at", "2015-12-07 04:38:00.124750"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Kaley Hahn"], ["email", "ashley@nicolas.biz"], ["password_digest", "$2a$10$W9wHgPpFuV768qTw4y0lQObI3p4PUzL1L2LDNIIZ4Y1Hrz13QMon."], ["address", "Kihn Fort"], ["city", "Lake Samara"], ["state", "Maine"], ["zip", "21112"], ["phone", "994-761-8351 x95448"], ["created_at", "2015-12-07 04:38:00.209925"], ["updated_at", "2015-12-07 04:38:00.209925"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Fredy Schimmel"], ["email", "dorris@brekke.org"], ["password_digest", "$2a$10$AoKq3HXsWyrnQws4bwCPLevr06vNVC6tx8O4tLP751btpqPh9KePO"], ["address", "Elinor Roads"], ["city", "Abbottland"], ["state", "New Jersey"], ["zip", "22343"], ["phone", "1-143-916-9354"], ["created_at", "2015-12-07 04:38:00.295439"], ["updated_at", "2015-12-07 04:38:00.295439"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Bruce Hessel"], ["email", "sylvia_collins@emmerich.io"], ["password_digest", "$2a$10$55oIext6zpi7zTIgw65b/ehf.osmJ9nvMqcqzCNHEEAHdkwfen.PG"], ["address", "Nina Freeway"], ["city", "Lake Adonisstad"], ["state", "South Dakota"], ["zip", "36898-2640"], ["phone", "170-639-1869"], ["created_at", "2015-12-07 04:38:00.385428"], ["updated_at", "2015-12-07 04:38:00.385428"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Kari Turcotte"], ["email", "anastasia.torphy@kling.co"], ["password_digest", "$2a$10$ulSZmQ4YbYTdBQFwZtLN.OeCZogqm9PQfiauoJBZm71BNBwKDgwWa"], ["address", "Howe Flat"], ["city", "Lake Brandynfort"], ["state", "Oregon"], ["zip", "69652-4098"], ["phone", "(295) 727-7832 x820"], ["created_at", "2015-12-07 04:38:00.469603"], ["updated_at", "2015-12-07 04:38:00.469603"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Karianne Schamberger"], ["email", "susan.thiel@wymanhegmann.org"], ["password_digest", "$2a$10$qKl1XF3mJ3a40Abd7zD4P.F1YUe.lkp7cy.QIMzkNxg8CZVMKr99K"], ["address", "Hermann Station"], ["city", "New Julio"], ["state", "Missouri"], ["zip", "30189-8813"], ["phone", "(661) 412-8980 x3498"], ["created_at", "2015-12-07 04:38:00.556541"], ["updated_at", "2015-12-07 04:38:00.556541"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Maud Schultz III"], ["email", "obie@kutch.net"], ["password_digest", "$2a$10$uDTlMDD/VUSnJg9MVOkGxuoSPd50GnODBEr6HGRka5D5tU9DVTRtq"], ["address", "O'Reilly Course"], ["city", "Reichelside"], ["state", "Missouri"], ["zip", "62734"], ["phone", "(806) 625-8299 x0978"], ["created_at", "2015-12-07 04:38:00.647709"], ["updated_at", "2015-12-07 04:38:00.647709"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Mellie Kuhn I"], ["email", "emile@bechtelar.io"], ["password_digest", "$2a$10$mygvuwNJzkfUB3XDUEEWAe3pWDi0rc4cBN7CFMZH9G5Ud2N2uA7ai"], ["address", "Isabelle Vista"], ["city", "Feestberg"], ["state", "North Dakota"], ["zip", "88429-5125"], ["phone", "1-282-527-9217 x4170"], ["created_at", "2015-12-07 04:38:00.735287"], ["updated_at", "2015-12-07 04:38:00.735287"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Abelardo Herman Sr."], ["email", "nettie@heathcotekulas.io"], ["password_digest", "$2a$10$ImmRAeGpsPsiqpawnIza2.VbQQlCvEq6wk6YGH39AF4o37gFat7Wy"], ["address", "Kozey Inlet"], ["city", "Claudebury"], ["state", "Oklahoma"], ["zip", "65419"], ["phone", "1-876-502-7984"], ["created_at", "2015-12-07 04:38:00.826711"], ["updated_at", "2015-12-07 04:38:00.826711"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 428], ["created_at", "2015-12-07 04:38:00.832717"], ["updated_at", "2015-12-07 04:38:00.832717"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 433], ["created_at", "2015-12-07 04:38:00.837122"], ["updated_at", "2015-12-07 04:38:00.837122"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 427], ["created_at", "2015-12-07 04:38:00.840951"], ["updated_at", "2015-12-07 04:38:00.840951"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 432], ["created_at", "2015-12-07 04:38:00.844380"], ["updated_at", "2015-12-07 04:38:00.844380"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 426], ["created_at", "2015-12-07 04:38:00.847891"], ["updated_at", "2015-12-07 04:38:00.847891"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 431], ["created_at", "2015-12-07 04:38:00.851839"], ["updated_at", "2015-12-07 04:38:00.851839"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 425], ["created_at", "2015-12-07 04:38:00.855275"], ["updated_at", "2015-12-07 04:38:00.855275"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 430], ["created_at", "2015-12-07 04:38:00.859405"], ["updated_at", "2015-12-07 04:38:00.859405"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 424], ["created_at", "2015-12-07 04:38:00.863639"], ["updated_at", "2015-12-07 04:38:00.863639"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 429], ["created_at", "2015-12-07 04:38:00.867518"], ["updated_at", "2015-12-07 04:38:00.867518"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Admin"], ["email", "admin@gmail.com"], ["password_digest", "$2a$10$/ErSV4Q1biJBneZHgY6hTu/jFmKIPcuXVqYYnnm8R.CnWehJmpJVi"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:38:00.956576"], ["updated_at", "2015-12-07 04:38:00.956576"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "admins" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 434], ["created_at", "2015-12-07 04:38:00.962145"], ["updated_at", "2015-12-07 04:38:00.962145"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Flatiron Charity"], ["email", "charity@gmail.com"], ["password_digest", "$2a$10$KPja1IKrBMcgJl5Vs8eVsuNj0AsqbDQYsv7Zml1cRfBi.X1u19NN."], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:38:01.048117"], ["updated_at", "2015-12-07 04:38:01.048117"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 435], ["created_at", "2015-12-07 04:38:01.054621"], ["updated_at", "2015-12-07 04:38:01.054621"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Flatiron Business"], ["email", "business@gmail.com"], ["password_digest", "$2a$10$xPhJm7qvkEMn.kv6YMvD8.vwWE1eygALFUGpO5zMc0YfLLfxRXpii"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:38:01.143000"], ["updated_at", "2015-12-07 04:38:01.143000"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 436], ["created_at", "2015-12-07 04:38:01.148222"], ["updated_at", "2015-12-07 04:38:01.148222"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "food"], ["id", 1], ["admin_id", 6], ["created_at", "2015-12-07 04:38:01.154142"], ["updated_at", "2015-12-07 04:38:01.154142"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "electronics"], ["id", 2], ["admin_id", 6], ["created_at", "2015-12-07 04:38:01.158557"], ["updated_at", "2015-12-07 04:38:01.158557"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "furniture"], ["id", 3], ["admin_id", 6], ["created_at", "2015-12-07 04:38:01.164510"], ["updated_at", "2015-12-07 04:38:01.164510"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "clothes"], ["id", 4], ["admin_id", 6], ["created_at", "2015-12-07 04:38:01.170779"], ["updated_at", "2015-12-07 04:38:01.170779"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Practical Rubber Computer"], ["inventory", 15], ["description", "streamline open-source networks"], ["category_id", 4], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.175608"], ["updated_at", "2015-12-07 04:38:01.175608"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Lightweight Silk Table"], ["inventory", 1], ["description", "transform visionary metrics"], ["category_id", 1], ["business_id", 1], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.180756"], ["updated_at", "2015-12-07 04:38:01.180756"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Ergonomic Granite Shirt"], ["inventory", 19], ["description", "mesh next-generation niches"], ["category_id", 1], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.184595"], ["updated_at", "2015-12-07 04:38:01.184595"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Intelligent Wool Keyboard"], ["inventory", 15], ["description", "incubate vertical content"], ["category_id", 1], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.187798"], ["updated_at", "2015-12-07 04:38:01.187798"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Sleek Cotton Pants"], ["inventory", 3], ["description", "exploit cross-platform synergies"], ["category_id", 2], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.191150"], ["updated_at", "2015-12-07 04:38:01.191150"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Sleek Iron Chair"], ["inventory", 12], ["description", "drive efficient channels"], ["category_id", 2], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.194618"], ["updated_at", "2015-12-07 04:38:01.194618"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Ergonomic Rubber Plate"], ["inventory", 5], ["description", "iterate B2C experiences"], ["category_id", 4], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.198226"], ["updated_at", "2015-12-07 04:38:01.198226"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Enormous Plastic Coat"], ["inventory", 20], ["description", "revolutionize holistic infrastructures"], ["category_id", 3], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.203273"], ["updated_at", "2015-12-07 04:38:01.203273"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Rustic Wool Knife"], ["inventory", 5], ["description", "incentivize cross-media experiences"], ["category_id", 4], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.207352"], ["updated_at", "2015-12-07 04:38:01.207352"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Ergonomic Rubber Knife"], ["inventory", 9], ["description", "unleash cross-media solutions"], ["category_id", 4], ["business_id", 1], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:38:01.210591"], ["updated_at", "2015-12-07 04:38:01.210591"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mBusiness Load (0.4ms)[0m  SELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" ASC LIMIT 1
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" DESC LIMIT 1[0m
+  [1m[35mItem Load (0.3ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 206], ["updated_at", "2015-12-07 04:38:01.217556"], ["id", 374]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 208], ["updated_at", "2015-12-07 04:38:01.225839"], ["id", 375]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 204], ["updated_at", "2015-12-07 04:38:01.228470"], ["id", 376]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 208], ["updated_at", "2015-12-07 04:38:01.232766"], ["id", 377]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 203], ["updated_at", "2015-12-07 04:38:01.236270"], ["id", 378]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 208], ["updated_at", "2015-12-07 04:38:01.239497"], ["id", 379]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 207], ["updated_at", "2015-12-07 04:38:01.242148"], ["id", 380]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 207], ["updated_at", "2015-12-07 04:38:01.244528"], ["id", 381]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 203], ["updated_at", "2015-12-07 04:38:01.248083"], ["id", 382]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 203], ["updated_at", "2015-12-07 04:38:01.250719"], ["id", 383]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mBusiness Load (0.8ms)[0m  SELECT "businesses".* FROM "businesses"
+  [1m[36mCharity Load (0.9ms)[0m  [1mSELECT "charities".* FROM "charities"[0m
+  [1m[35mAdmin Load (0.8ms)[0m  SELECT "admins".* FROM "admins"
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" DESC LIMIT 1[0m
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+
+
+Started GET "/logout" for ::1 at 2015-12-06 23:39:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:39:44 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (28.2ms)
+  Rendered layouts/_flashmessages.html.erb (1.0ms)
+Completed 200 OK in 464ms (Views: 460.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:39:46 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.8ms)
+Completed 200 OK in 212ms (Views: 210.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 23:39:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-06 23:39:47 -0500
+
+
+Started GET "/login" for ::1 at 2015-12-06 23:40:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (538.7ms)
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (33.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.6ms)
+Completed 200 OK in 1113ms (Views: 1097.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 23:40:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QYI3tN2ySP2HpmbmXbARoQotB5QsuHWNpqhVixC2V6hm1UfIOSJJizLKpAxx6SP/0ar1AwNMRKoK2l6D9ufazw==", "session"=>{"email"=>"charity@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "charity@gmail.com"]]
+Redirected to http://localhost:3000/users/435
+Completed 302 Found in 117ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/435" for ::1 at 2015-12-06 23:40:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"435"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCharity Load (0.5ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mBusiness Load (0.4ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (52.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.9ms)
+Completed 200 OK in 192ms (Views: 181.8ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:40:14 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.9ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (12.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCharity Load (0.4ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (6.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 163ms (Views: 153.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/items/378" for ::1 at 2015-12-06 23:40:15 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"378"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 378]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mCharity Load (0.5ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered items/show.html.erb within layouts/application (20.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 11025ms (Views: 155.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/line_items?item_id=378" for ::1 at 2015-12-06 23:40:45 -0500
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"kobzi30DAG4FAOBV6tFIc/TyPH7NHAelSfJw38gz3+210YP3mZMBGLBsIr/GiHotL3XO6eLoNoLlgHvXLmJSig==", "item_id"=>"378"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "carts" ("charity_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["charity_id", 214], ["created_at", "2015-12-07 04:40:45.749608"], ["updated_at", "2015-12-07 04:40:45.749608"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 378]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 378]]
+  [1m[36mItem Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1 AND "items"."id" = $2 LIMIT 1[0m  [["cart_id", 15], ["id", 378]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cart_id", 15], ["item_id", 378], ["created_at", "2015-12-07 04:40:45.842194"], ["updated_at", "2015-12-07 04:40:45.842194"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."item_id" = $1 AND "line_items"."cart_id" = $2 LIMIT 1[0m  [["item_id", 378], ["cart_id", 15]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3[0m  [["quantity", 1], ["updated_at", "2015-12-07 04:40:45.848211"], ["id", 28]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/carts/15
+Completed 302 Found in 166ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/carts/15" for ::1 at 2015-12-06 23:40:45 -0500
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 15]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 378]]
+  Rendered carts/show.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1  [["id", 15]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1  [["id", 15]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mCharity Load (0.4ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (29.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.3ms)
+Completed 200 OK in 175ms (Views: 168.8ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/orders" for ::1 at 2015-12-06 23:40:48 -0500
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"ojeZ5aF28NTmk/305Y3cQal2Y0woz7Kt/g66WYuMdLKFYOmZRebxolP/Px7J1O4fcvGR2wc7g4pSfLFRbd351Q=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."charity_id" = $1 LIMIT 1  [["charity_id", 214]]
+  [1m[36mOrder Load (0.4ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 AND "orders"."cart_id" = $2 AND "orders"."charity_id" = $3 LIMIT 1[0m  [["id", 15], ["cart_id", 15], ["charity_id", 214]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("id", "cart_id", "charity_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 15], ["cart_id", 15], ["charity_id", 214], ["created_at", "2015-12-07 04:40:48.419720"], ["updated_at", "2015-12-07 04:40:48.419720"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 15]]
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 378]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "inventory" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["inventory", 2], ["updated_at", "2015-12-07 04:40:48.427962"], ["id", 378]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "orders" SET "status" = $1, "updated_at" = $2 WHERE "orders"."id" = $3[0m  [["status", "submitted"], ["updated_at", "2015-12-07 04:40:48.431752"], ["id", 15]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/435
+Completed 302 Found in 36ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/435" for ::1 at 2015-12-06 23:40:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"435"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (8.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 146ms (Views: 141.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:40:51 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 131.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items/379" for ::1 at 2015-12-06 23:40:52 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"379"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 379]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  Rendered items/show.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 147.5ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/line_items?item_id=379" for ::1 at 2015-12-06 23:40:54 -0500
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"3wfr+99J2iEHG/Iun+JsKDwZBHOVEqVLsmftcx91SnD4UJuHO9nbV7J3MMSzu15255725LrmlGweFeZ7+STHFw==", "item_id"=>"379"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "carts" ("charity_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["charity_id", 214], ["created_at", "2015-12-07 04:40:54.603953"], ["updated_at", "2015-12-07 04:40:54.603953"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 379]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 379]]
+  [1m[35mItem Exists (0.4ms)[0m  SELECT  1 AS one FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1 AND "items"."id" = $2 LIMIT 1  [["cart_id", 16], ["id", 379]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["cart_id", 16], ["item_id", 379], ["created_at", "2015-12-07 04:40:54.613326"], ["updated_at", "2015-12-07 04:40:54.613326"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."item_id" = $1 AND "line_items"."cart_id" = $2 LIMIT 1  [["item_id", 379], ["cart_id", 16]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3  [["quantity", 1], ["updated_at", "2015-12-07 04:40:54.617351"], ["id", 29]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/carts/16
+Completed 302 Found in 21ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/carts/16" for ::1 at 2015-12-06 23:40:54 -0500
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 16]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 379]]
+  Rendered carts/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 16]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (26.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 156ms (Views: 152.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/orders" for ::1 at 2015-12-06 23:40:56 -0500
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"tmTglaJN3XXSMIMosYYOukhZ5QhuhL+0Q5JH6CWq9b6RM5DpRt3cA2dcQcKd3zzkk94Xn0FwjpPv4Ezgw/t42Q=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCart Load (0.3ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."charity_id" = $1 LIMIT 1[0m  [["charity_id", 214]]
+  [1m[35mOrder Load (0.3ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 AND "orders"."cart_id" = $2 AND "orders"."charity_id" = $3 LIMIT 1  [["id", 15], ["cart_id", 15], ["charity_id", 214]]
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 15]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 378]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "items" SET "inventory" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["inventory", 1], ["updated_at", "2015-12-07 04:40:56.404278"], ["id", 378]]
+  [1m[36m (238.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/435
+Completed 302 Found in 255ms (ActiveRecord: 241.3ms)
+
+
+Started GET "/users/435" for ::1 at 2015-12-06 23:40:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"435"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 165ms (Views: 161.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:40:57 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 141ms (Views: 139.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/379" for ::1 at 2015-12-06 23:40:59 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"379"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 379]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 435]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered items/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 131.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/orders" for ::1 at 2015-12-06 23:42:08 -0500
+Processing by OrdersController#index as HTML
+  Rendered orders/index.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 435]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 435]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 435]]
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 150ms (Views: 147.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 23:42:09 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:42:09 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 114ms (Views: 112.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 23:42:11 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 128ms (Views: 127.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 23:42:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xaEryNNfrPdjzTCiKTOS/LNNZYquIYFCAEaA7HQT+ODi9lu0N8+tgdah8kgFaqCiaMqXHYHVsGWsNIvkkkJ1hw==", "session"=>{"email"=>"business@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "business@gmail.com"]]
+Redirected to http://localhost:3000/users/436
+Completed 302 Found in 83ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/436" for ::1 at 2015-12-06 23:42:18 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"436"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (12.3ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 151ms (Views: 147.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:42:32 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 123.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items/379" for ::1 at 2015-12-06 23:42:33 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"379"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 379]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 137.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/new" for ::1 at 2015-12-06 23:42:35 -0500
+Processing by ItemsController#new as HTML
+  [1m[36mCategory Load (0.9ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  Rendered items/_form.html.erb (33.0ms)
+  Rendered items/new.html.erb within layouts/application (57.8ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 189ms (Views: 186.3ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/items" for ::1 at 2015-12-06 23:42:44 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZ1TsUfPhfSGSC8BIorBaKZPP1m5BfBDm9ssGQDpp/qSyiPNo1+EgjMk7esO0/M2fcjNzpbxwWQ3qScR5rgqnQ==", "item"=>{"title"=>"test", "inventory"=>"1", "description"=>"test", "category_id"=>"4", "business_id"=>"436"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "business_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["inventory", 1], ["description", "test"], ["business_id", 436], ["category_id", 4], ["created_at", "2015-12-07 04:42:44.829439"], ["updated_at", "2015-12-07 04:42:44.829439"]]
+  [1m[35m (15.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/384
+Completed 302 Found in 22ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/items/384" for ::1 at 2015-12-06 23:42:44 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"384"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 384]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (4.9ms)
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.6ms)
+Completed 200 OK in 126ms (Views: 123.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:42:47 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 131.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/384" for ::1 at 2015-12-06 23:42:50 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"384"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 384]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (4.5ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 128.9ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/items/384" for ::1 at 2015-12-06 23:42:51 -0500
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6rxpT/gTXdxsXFW9M9l9STC7AXI5YMOBxcoiUDdBCl7N6xkzHINcqtkwl1cfgE8X6zzz5RaU8qZpuClY0RCHOQ==", "id"=>"384"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 384]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 384]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/items
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:42:51 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 142.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 23:42:52 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:42:52 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 133.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 23:42:54 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 23:43:02 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CegoC2+PsAtVdi/q93bNlf3Dnm8Kkm0Gip32wmAferDcNDcyS4/tpg5GlWHhOlojHD87pPeeJO2WHzT79HwjQ==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "admin@gmail.com"]]
+Redirected to http://localhost:3000/users/434
+Completed 302 Found in 88ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/434" for ::1 at 2015-12-06 23:43:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"434"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 434]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (10.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 130ms (Views: 126.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:43:45 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (6.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 127.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/379" for ::1 at 2015-12-06 23:43:47 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"379"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 379]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 434]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  Rendered items/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 143ms (Views: 139.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/434" for ::1 at 2015-12-06 23:43:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"434"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 434]]
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (6.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 130ms (Views: 127.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories" for ::1 at 2015-12-06 23:43:58 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (3.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (7.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 142ms (Views: 139.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/categories/1" for ::1 at 2015-12-06 23:44:00 -0500
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered categories/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 434]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories" for ::1 at 2015-12-06 23:44:03 -0500
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 121ms (Views: 118.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin" for ::1 at 2015-12-06 23:44:04 -0500
+Processing by AdminController#index as HTML
+  [1m[35mAdmin Load (0.6ms)[0m  SELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "businesses" ON "businesses"."user_id" = "users"."id"
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "charities" ON "charities"."user_id" = "users"."id"[0m
+  Rendered admin/_user_analytics.html.erb (14.0ms)
+  Rendered admin/_donation_analytics.html.erb (0.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered admin/_business_analytics.html.erb (0.9ms)
+  [1m[36m (0.7ms)[0m  [1mSELECT DISTINCT COUNT(DISTINCT "orders"."charity_id") FROM "orders"[0m
+  Rendered admin/_charity_analytics.html.erb (2.0ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered admin/_category_analytics.html.erb (1.8ms)
+  Rendered admin/index.html.erb within layouts/application (37.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 434]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 434]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 434]]
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 194ms (Views: 187.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 23:44:20 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:44:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 123ms (Views: 121.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 23:44:21 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 120ms (Views: 118.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 23:44:26 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+rm2AFagxnt11uXrUNlUpjVDVBu90OEGqsFB0zwJAajd7sZ8sjDHDcC6JwF8gGb47sSmjJIk0CEGs0rb2liMzw==", "session"=>{"email"=>"business@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "business@gmail.com"]]
+Redirected to http://localhost:3000/users/436
+Completed 302 Found in 83ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/436" for ::1 at 2015-12-06 23:44:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"436"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:44:28 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 139ms (Views: 136.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/379" for ::1 at 2015-12-06 23:44:28 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"379"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 379]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 135ms (Views: 132.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/items/new" for ::1 at 2015-12-06 23:44:35 -0500
+Processing by ItemsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  Rendered items/_form.html.erb (4.8ms)
+  Rendered items/new.html.erb within layouts/application (7.1ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 144.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/items" for ::1 at 2015-12-06 23:44:41 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kBWQVmqqMbkj0Z2n1vtpbxFWCiTf57S/32n8GEBhER23QuAqjjowz5a9X036olsxytH4s/AThZhzG/cQpjCceg==", "item"=>{"title"=>"test", "inventory"=>"3", "description"=>"test", "category_id"=>"4", "business_id"=>"436"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "business_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["inventory", 3], ["description", "test"], ["business_id", 436], ["category_id", 4], ["created_at", "2015-12-07 04:44:41.581878"], ["updated_at", "2015-12-07 04:44:41.581878"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/385
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/items/385" for ::1 at 2015-12-06 23:44:41 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"385"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 385]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.1ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (3.8ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 122ms (Views: 119.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:44:43 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 125.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/385" for ::1 at 2015-12-06 23:44:45 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"385"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 385]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 436]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (4.0ms)
+  [1m[36mAdmin Load (0.4ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 127ms (Views: 124.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items/385/edit" for ::1 at 2015-12-06 23:44:46 -0500
+Processing by ItemsController#edit as HTML
+  Parameters: {"id"=>"385"}
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 385]]
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  Rendered items/_form.html.erb (5.9ms)
+  Rendered items/edit.html.erb within layouts/application (9.8ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 176ms (Views: 173.1ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/items/385" for ::1 at 2015-12-06 23:44:49 -0500
+Processing by ItemsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bIwfRVKbMFx6khRfnwwaVV/W74wek8PqhmztKHAo849L2285tgsxKs/+1rWzVSgLhFEdGzFn8s0qHuYglnl+6A==", "item"=>{"title"=>"test", "inventory"=>"3", "description"=>"test", "category_id"=>"4", "business_id"=>"436"}, "commit"=>"Submit", "id"=>"385"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 385]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/385
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/items/385" for ::1 at 2015-12-06 23:44:49 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"385"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 385]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered items/show.html.erb within layouts/application (6.1ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 131ms (Views: 128.2ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/items/385" for ::1 at 2015-12-06 23:44:51 -0500
+Processing by ItemsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yVAN28Sh0zk5ICSkL9puWiLxVyIeg4DO3wtKmSQLC6juB32nIDHST4xM5k4Dg1wE+XaltTF3selzeUGRwlqGzw==", "id"=>"385"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 385]]
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 385]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/items
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 23:44:51 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 436]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 436]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 436]]
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 23:44:52 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 23:44:52 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 126.9ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 424]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 425]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 426]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 427]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 428]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 429]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 430]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 431]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 432]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 433]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 434]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 435]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "users" WHERE "users"."id" = $1  [["id", 436]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mItem Load (0.7ms)[0m  SELECT "items".* FROM "items"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 379]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 380]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 381]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 382]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 383]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 378]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 374]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 375]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "items" WHERE "items"."id" = $1  [["id", 376]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "items" WHERE "items"."id" = $1[0m  [["id", 377]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mBusiness Load (0.6ms)[0m  [1mSELECT "businesses".* FROM "businesses"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 203]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 204]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 205]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 206]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "businesses" WHERE "businesses"."id" = $1[0m  [["id", 207]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "businesses" WHERE "businesses"."id" = $1  [["id", 208]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mCharity Load (0.6ms)[0m  SELECT "charities".* FROM "charities"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 209]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 210]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 211]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 212]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "charities" WHERE "charities"."id" = $1  [["id", 213]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "charities" WHERE "charities"."id" = $1[0m  [["id", 214]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 2]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "categories" WHERE "categories"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "categories" WHERE "categories"."id" = $1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mCart Load (0.6ms)[0m  SELECT "carts".* FROM "carts"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = $1  [["id", 15]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.5ms)[0m  [1mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "line_items" WHERE "line_items"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "line_items" WHERE "line_items"."id" = $1  [["id", 29]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mOrder Load (0.5ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "orders" WHERE "orders"."id" = $1  [["id", 15]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT "admins".* FROM "admins"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "admins" WHERE "admins"."id" = $1  [["id", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Oswaldo Bogan"], ["email", "marc@hegmann.net"], ["password_digest", "$2a$10$QISJFLyOFc9mXw4Pt.wNFuMxji6ElW18aJkrRdVUs9mbruandX7DK"], ["address", "Beer Run"], ["city", "Lowellland"], ["state", "Mississippi"], ["zip", "63085"], ["phone", "549-981-8318 x9247"], ["created_at", "2015-12-07 04:45:24.909767"], ["updated_at", "2015-12-07 04:45:24.909767"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Myrtie Romaguera"], ["email", "ambrose_friesen@cruickshankdubuque.io"], ["password_digest", "$2a$10$6lK6s/WayDOfW/df22BwIeCy8C8IvBM9RQjzcgHlULhHHMjzRpa8G"], ["address", "Idella Streets"], ["city", "Gibsonmouth"], ["state", "Kansas"], ["zip", "31747"], ["phone", "680.372.8662 x41214"], ["created_at", "2015-12-07 04:45:25.002738"], ["updated_at", "2015-12-07 04:45:25.002738"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Germaine Monahan"], ["email", "moses.hahn@muller.info"], ["password_digest", "$2a$10$yxkA.I6lIg4ILuAsgLZnzetO/ce.9O2J0.lmyRU47cK9wxLRz2nOe"], ["address", "Trinity Inlet"], ["city", "Cheyanneborough"], ["state", "Delaware"], ["zip", "40108-8523"], ["phone", "(615) 830-7972 x10458"], ["created_at", "2015-12-07 04:45:25.085845"], ["updated_at", "2015-12-07 04:45:25.085845"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Miss Leonardo Wintheiser"], ["email", "jerry_mcglynn@jast.com"], ["password_digest", "$2a$10$UCg80MCa0.qMvCUZ3S5iPeRC70/so.k2zoSNT5i9S5G60F7HW1862"], ["address", "Crona Plain"], ["city", "North Americaport"], ["state", "Connecticut"], ["zip", "87509-8723"], ["phone", "646.354.0881 x5740"], ["created_at", "2015-12-07 04:45:25.173381"], ["updated_at", "2015-12-07 04:45:25.173381"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Clifton Gerhold"], ["email", "anthony_zemlak@stokesmetz.org"], ["password_digest", "$2a$10$boJ0kFLQcorgdwHaQFnuR.Q253ZxREHcHgBXAszVm3XZeWRz0T.Yi"], ["address", "Millie Route"], ["city", "Soniabury"], ["state", "Indiana"], ["zip", "36770-6474"], ["phone", "613.868.2824 x700"], ["created_at", "2015-12-07 04:45:25.259906"], ["updated_at", "2015-12-07 04:45:25.259906"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Leland Zboncak"], ["email", "domenica_flatley@vandervort.co"], ["password_digest", "$2a$10$Jby7YHU2IX6cvYx7wVyzJe/9tkZ1NLvMVQp45.jkiEBYs85Csc5ui"], ["address", "Rickie Turnpike"], ["city", "Isomborough"], ["state", "Pennsylvania"], ["zip", "40470-0075"], ["phone", "619.532.9247"], ["created_at", "2015-12-07 04:45:25.345924"], ["updated_at", "2015-12-07 04:45:25.345924"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Ms. Nicola Schamberger"], ["email", "zachery@walshhaag.net"], ["password_digest", "$2a$10$9ITalVp.PU7kfcYn1PMvmemvSwzgBoWlx4OCjM7ad/2LuCw1Yhme2"], ["address", "Hugh Inlet"], ["city", "South Jeraldside"], ["state", "New York"], ["zip", "78465-8595"], ["phone", "(350) 382-3160 x715"], ["created_at", "2015-12-07 04:45:25.434839"], ["updated_at", "2015-12-07 04:45:25.434839"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Lucie Balistreri"], ["email", "shany@zemlaknienow.biz"], ["password_digest", "$2a$10$0NkTXACKySdyjuinTys7YuxmTVYoGy5JZML3PW12kXGJIti5OViRu"], ["address", "Ruecker Spring"], ["city", "Herzogview"], ["state", "New Hampshire"], ["zip", "95037-9358"], ["phone", "1-578-800-0583 x0209"], ["created_at", "2015-12-07 04:45:25.517953"], ["updated_at", "2015-12-07 04:45:25.517953"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Kathryn Treutel"], ["email", "rolando@boehmhyatt.biz"], ["password_digest", "$2a$10$ZqkOtPkA72ZATLZdFqxoP.pvbf.AjJMHx7LnbEyFRgp7zbVU5WBly"], ["address", "Kennith Flat"], ["city", "Walshmouth"], ["state", "North Dakota"], ["zip", "96177"], ["phone", "1-743-939-7528 x0686"], ["created_at", "2015-12-07 04:45:25.609791"], ["updated_at", "2015-12-07 04:45:25.609791"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Neal Rolfson"], ["email", "nia@mohr.name"], ["password_digest", "$2a$10$ALMzqb6twTzwSTRFyRZK8.48RsCeI5ZUwqWXMiOgY3glDWSImIXZa"], ["address", "Lou Fall"], ["city", "East Darrionland"], ["state", "Missouri"], ["zip", "79281"], ["phone", "641.124.0751 x3727"], ["created_at", "2015-12-07 04:45:25.691638"], ["updated_at", "2015-12-07 04:45:25.691638"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 441], ["created_at", "2015-12-07 04:45:25.696141"], ["updated_at", "2015-12-07 04:45:25.696141"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 446], ["created_at", "2015-12-07 04:45:25.700159"], ["updated_at", "2015-12-07 04:45:25.700159"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 440], ["created_at", "2015-12-07 04:45:25.703880"], ["updated_at", "2015-12-07 04:45:25.703880"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 445], ["created_at", "2015-12-07 04:45:25.707901"], ["updated_at", "2015-12-07 04:45:25.707901"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 439], ["created_at", "2015-12-07 04:45:25.711376"], ["updated_at", "2015-12-07 04:45:25.711376"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 444], ["created_at", "2015-12-07 04:45:25.714801"], ["updated_at", "2015-12-07 04:45:25.714801"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 438], ["created_at", "2015-12-07 04:45:25.718093"], ["updated_at", "2015-12-07 04:45:25.718093"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 443], ["created_at", "2015-12-07 04:45:25.721502"], ["updated_at", "2015-12-07 04:45:25.721502"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 437], ["created_at", "2015-12-07 04:45:25.724934"], ["updated_at", "2015-12-07 04:45:25.724934"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 442], ["created_at", "2015-12-07 04:45:25.728230"], ["updated_at", "2015-12-07 04:45:25.728230"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Admin"], ["email", "admin@gmail.com"], ["password_digest", "$2a$10$2ZSN3jHnmfHrlFtsTsnr6OoD6IDmI234gXGx82gs2IYnZSoQGFBWe"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:45:25.810253"], ["updated_at", "2015-12-07 04:45:25.810253"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "admins" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 447], ["created_at", "2015-12-07 04:45:25.815250"], ["updated_at", "2015-12-07 04:45:25.815250"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Flatiron Charity"], ["email", "charity@gmail.com"], ["password_digest", "$2a$10$nBD50aG2z60mi.3/wvdTLe80xfSe0v93ChTBdz5mF1LeMAgcLwTDa"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:45:25.899450"], ["updated_at", "2015-12-07 04:45:25.899450"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 448], ["created_at", "2015-12-07 04:45:25.904489"], ["updated_at", "2015-12-07 04:45:25.904489"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "address", "city", "state", "zip", "phone", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "Flatiron Business"], ["email", "business@gmail.com"], ["password_digest", "$2a$10$8hMbA.ENuiiJMST5EJERUO4DFxyTlTQnt/BGIBtJZcxuQyGAC0QSO"], ["address", "11 Broadway"], ["city", "New York"], ["state", "NY"], ["zip", "10004"], ["phone", "888-958-0569"], ["created_at", "2015-12-07 04:45:25.987733"], ["updated_at", "2015-12-07 04:45:25.987733"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 449], ["created_at", "2015-12-07 04:45:25.992727"], ["updated_at", "2015-12-07 04:45:25.992727"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.6ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "food"], ["id", 1], ["admin_id", 7], ["created_at", "2015-12-07 04:45:25.998615"], ["updated_at", "2015-12-07 04:45:25.998615"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "electronics"], ["id", 2], ["admin_id", 7], ["created_at", "2015-12-07 04:45:26.002928"], ["updated_at", "2015-12-07 04:45:26.002928"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "furniture"], ["id", 3], ["admin_id", 7], ["created_at", "2015-12-07 04:45:26.006221"], ["updated_at", "2015-12-07 04:45:26.006221"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins"  ORDER BY "admins"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "id", "admin_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "clothes"], ["id", 4], ["admin_id", 7], ["created_at", "2015-12-07 04:45:26.009365"], ["updated_at", "2015-12-07 04:45:26.009365"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Sleek Concrete Shoes"], ["inventory", 9], ["description", "innovate synergistic deliverables"], ["category_id", 2], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.012623"], ["updated_at", "2015-12-07 04:45:26.012623"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Enormous Marble Chair"], ["inventory", 9], ["description", "reinvent collaborative methodologies"], ["category_id", 1], ["business_id", 1], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.016330"], ["updated_at", "2015-12-07 04:45:26.016330"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Ergonomic Copper Watch"], ["inventory", 7], ["description", "e-enable cross-media technologies"], ["category_id", 1], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.019277"], ["updated_at", "2015-12-07 04:45:26.019277"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Incredible Concrete Plate"], ["inventory", 9], ["description", "reinvent wireless web-readiness"], ["category_id", 2], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.022225"], ["updated_at", "2015-12-07 04:45:26.022225"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Aerodynamic Paper Bench"], ["inventory", 19], ["description", "empower sexy eyeballs"], ["category_id", 2], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.025156"], ["updated_at", "2015-12-07 04:45:26.025156"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Durable Iron Table"], ["inventory", 4], ["description", "deploy rich e-business"], ["category_id", 3], ["business_id", 2], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.028098"], ["updated_at", "2015-12-07 04:45:26.028098"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Fantastic Steel Keyboard"], ["inventory", 7], ["description", "incentivize strategic communities"], ["category_id", 1], ["business_id", 4], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.031026"], ["updated_at", "2015-12-07 04:45:26.031026"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Ergonomic Iron Hat"], ["inventory", 13], ["description", "transform efficient content"], ["category_id", 3], ["business_id", 5], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.034128"], ["updated_at", "2015-12-07 04:45:26.034128"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["title", "Sleek Aluminum Wallet"], ["inventory", 13], ["description", "architect collaborative platforms"], ["category_id", 2], ["business_id", 3], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.037184"], ["updated_at", "2015-12-07 04:45:26.037184"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "category_id", "business_id", "photo_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["title", "Mediocre Plastic Table"], ["inventory", 18], ["description", "streamline integrated convergence"], ["category_id", 2], ["business_id", 1], ["photo_url", "http://lorempixel.com/200/200/technics/"], ["created_at", "2015-12-07 04:45:26.040924"], ["updated_at", "2015-12-07 04:45:26.040924"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" ASC LIMIT 1[0m
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses"  ORDER BY "businesses"."id" DESC LIMIT 1
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 214], ["updated_at", "2015-12-07 04:45:26.046760"], ["id", 386]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 211], ["updated_at", "2015-12-07 04:45:26.054859"], ["id", 387]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 211], ["updated_at", "2015-12-07 04:45:26.057746"], ["id", 388]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 211], ["updated_at", "2015-12-07 04:45:26.061193"], ["id", 389]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 211], ["updated_at", "2015-12-07 04:45:26.063696"], ["id", 390]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 212], ["updated_at", "2015-12-07 04:45:26.080111"], ["id", 391]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 209], ["updated_at", "2015-12-07 04:45:26.083030"], ["id", 392]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 209], ["updated_at", "2015-12-07 04:45:26.085575"], ["id", 393]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3[0m  [["business_id", 213], ["updated_at", "2015-12-07 04:45:26.087983"], ["id", 394]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "items" SET "business_id" = $1, "updated_at" = $2 WHERE "items"."id" = $3  [["business_id", 209], ["updated_at", "2015-12-07 04:45:26.090307"], ["id", 395]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
