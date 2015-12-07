@@ -37,16 +37,16 @@
 - [X] Build header (login, logout, items, sign in, signup, cart, home, category)
 - [X] destroy line item, cart, order
 - [X] set up order controller
-- [ ] order history
+- [ ] order history - should have view objects
 - [X] order page (upon successful cart submission)
 - [ ] business/charity permission
 - [ ] revisit flow (with Lesly)
 ---------
 - [] remove extra button tag in order page
-- [] add business hidden field to item
+- [X] add business hidden field to item
 - [] show items that business has submitted
 - [] deleting items after order is successfull
-- [] fix errors with submitting blank forms
+- [X] fix errors with submitting blank forms
 
 # Features
 - [ ] action-mailer
@@ -56,7 +56,7 @@
 	-[] add map of business location to items index
 	-[] add google maps to charity/business home pages
 	-[] add google maps to order success page showing order locations
-- [ ] admin page -- Monday
+- [ ] admin page
 - [ ] search controller? (maybe ember week)
 
 #Ember & Javascript/Ajax
@@ -71,4 +71,10 @@ Tatiana: action-mailer
 Austin: google maps
 Natalie: fix cart/checkout system + begin admin page
 Lesley: Search controller
+
+Weekend:
+-[] completes cart checkout process
+-[] adds business_id hidden field to items forms and admin_id field to category forms
+-[] begins adding admin functionality
+-[] fixes business/charity permissions
 
