@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
 
 	def index
-		@admin = Admin.find_by(user_id: params[:id])
+		@admin = Admin.find_by(user_id: current_user.id)
 		@users = User.all
 		@items = Item.all
 		@orders = Order.all
