@@ -56,34 +56,42 @@ Weekend:
 - [X] add business hidden field to item
 - [X] fix errors with submitting blank forms
 
-# Features
-- [X ] action-mailer
-	- [X] send one email to charity upon order confirmation
-	- [X] send one email to business after charity has accepted their item
-- [] google maps
-	-[] add map of business location to items index
-	-[] add google maps to charity/business home pages
-	-[] add google maps to order success page showing order locations
-
-#Ember & Javascript/Ajax
-- [] ajax for carts controller
-- [] lazy loader
-
-#Revisit flow with lesley
-- [ ] add image to home page and hide login/signup from navbar for logged out users/add new buttons for main page
-- [] update validations errors for signup page
+#Day 5
 - [X] fix h1 on users_info partial - austin
 - [X] add font awesome gem/run bundle install - natalie
-- [] hidden edit form for user edit page
 - [X] format phone number/phone field - austin
 - [X] order confirmation after checking out - lesley
 - [X] order history show page - natalie & austin
 - [X] decrement - natalie & austin
 - [X] update search for item name and categories (categories dropdown) - lesley
 - [X] add item history for business view - tatiana
-- [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
-- [] fix add category error
 - [X] permissions lesly
+- [X ] action-mailer - tatiana
+	- [X] send one email to charity upon order confirmation
+	- [X] send one email to business after charity has accepted their item
+-[X] add google maps to charity/business home pages
+
+#Revisit flow with lesley
+- [ ] add image to home page and hide login/signup from navbar for logged out users/add new buttons for main page
+- [] update validations errors for signup page
+- [] hidden edit form for user edit page
+- [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
+- [] add new categories automatically to category dropdown
 - [] only show profile edit button if you're logged in
 - [] indication of Business or charity on profile page
 - [] can carts be hacked?
+- [] video to home page
+- [] splitting up inventory
+
+#Suggested Features
+- [] rankings for who gets what items
+- [] donations
+- [] 20 methods total
+- [] 5 tests per person
+- [] google maps
+	-[] add map of business location to items index
+	-[] add google maps to order success page showing order locations
+- [] ajax for carts controller
+- [] lazy loader - image, h1, description (adjust schema to add more items)
+
+
