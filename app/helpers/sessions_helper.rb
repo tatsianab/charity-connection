@@ -26,14 +26,14 @@ module SessionsHelper
       end
     end
 
-    def validate_charity?
+    def valid_charity?
       if Charity.where(user_id: session[:user_id]).empty?
         flash[:notice] = "You must be logged in as a Charity to order an item"
         redirect_to '/login'
       end
     end
 
-    def validate_business?
+    def valid_business?
       if Business.where(user_id: session[:user_id]).empty?
         flash[:notice] = "You must be logged in as a Business to list an item"
         redirect_to '/login'

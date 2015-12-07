@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
-  before_action :validate_charity?, only: [:new,:create, :edit, :show]
+  before_action :valid_charity?, only: [:new,:create, :edit, :show]
+
 	def index
 		@user = User.find(session[:user_id])
 		@orders = @user.charity.orders

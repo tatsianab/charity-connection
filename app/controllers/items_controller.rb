@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-	before_action :validate_business?, only: [:new, :create, :edit]
+	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
 			  @items = Item.all
