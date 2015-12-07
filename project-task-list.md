@@ -75,7 +75,7 @@ Weekend:
 - [X] fix h1 on users_info partial - austin
 - [X] add font awesome gem/run bundle install - natalie
 - [] hidden edit form for user edit page
-- [] format phone number/phone field - austin
+- [X] format phone number/phone field - austin
 - [] visit order show page after checking out - lesley
 - [] order history show page - natalie & austin
 - [] decrement - natalie & austin
