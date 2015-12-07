@@ -12,7 +12,14 @@ class CartsController < ApplicationController
 
         session.delete(:cart_id)
         session.clear
-        redirect_to(store_path)
+        redirect_to(items_path)
+    end
+
+    def destroy
+        @current_cart = Cart.find(session[:cart_id])
+        session.delete(:cart_id)
+        @current_cart.destroy
+        redirect_to(items)
     end
 
 
