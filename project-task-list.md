@@ -37,17 +37,29 @@
 	- [X] Build header (login, logout, items, sign in, signup, cart, home, category)
 	- [X] destroy line item, cart, order
 	- [X] set up order controller
-	- [ ] order history
 	- [X] order page (upon successful cart submission)
-	- [ ] business/charity permission
-	- [ ] revisit flow (with Lesly)
-##Minor Fixes
-- [] remove extra button tag in order page
+
+
+##This Weekend - Assignments
+Tatiana: action-mailer
+Austin: google maps
+Natalie: fix cart/checkout system + begin admin page
+Lesley: Search controller
+
+Weekend:
+- [X] completes cart checkout process
+- [X] adds business_id hidden field to items forms and admin_id field to category forms
+- [X] begins adding admin functionality
+- [X] business/charity permission
+- [X] search controller? (maybe ember week)
+- [X] remove extra button tag in order page
 - [X] add business hidden field to item
-- [] show items that business has submitted
-- [] deleting items after order is successfull
 - [X] fix errors with submitting blank forms
-- [] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
+
+#To Do
+- [ ] order history
+- [ ] business item history page
+- [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 
 # Features
 - [ ] action-mailer
@@ -62,18 +74,5 @@
 - [] ajax for carts controller
 - [] lazy loader
 
-#Refactoring
-- [ ] routing constraints?
-
-##This Weekend:
-Tatiana: action-mailer
-Austin: google maps
-Natalie: fix cart/checkout system + begin admin page
-Lesley: Search controller
-
-Weekend:
--[] completes cart checkout process
--[] adds business_id hidden field to items forms and admin_id field to category forms
--[] begins adding admin functionality
--[] fixes business/charity permissions
-- [X] search controller? (maybe ember week)
+#Revisit flow with lesley
+- [X] 
