@@ -47,6 +47,7 @@
 - [] show items that business has submitted
 - [] deleting items after order is successfull
 - [X] fix errors with submitting blank forms
+- [] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 
 # Features
 - [ ] action-mailer
