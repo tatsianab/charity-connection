@@ -11,9 +11,7 @@ module CartsHelper
 
  	def current_cart
  		if session[:cart_id] != nil && !Cart.where(id: session[:cart_id]).empty?
- 			if Cart.find(session[:cart_id]).charity_id == current_user.id
- 				cart ||= Cart.find(session[:cart_id])
- 			end
+ 			cart ||= Cart.find(session[:cart_id])
  		end
  	end
 
