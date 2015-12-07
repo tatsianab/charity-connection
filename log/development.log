@@ -24009,3 +24009,725 @@ Processing by AdminController#index as HTML
   Rendered layouts/_header.html.erb (6.1ms)
   Rendered layouts/_flashmessages.html.erb (0.2ms)
 Completed 200 OK in 198ms (Views: 136.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for ::1 at 2015-12-06 21:44:21 -0500
+Processing by AdminController#index as HTML
+  Rendered admin/index.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 405]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 405]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 405]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 405]]
+  Rendered layouts/_header.html.erb (44.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.3ms)
+Completed 200 OK in 11008ms (Views: 187.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:32 -0500
+
+
+Started GET "/assets/carts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:32 -0500
+
+
+Started GET "/assets/categories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:32 -0500
+
+
+Started GET "/assets/line_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:32 -0500
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/admin.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/carts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/categories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/line_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-06 21:44:33 -0500
+
+
+Started GET "/logout" for ::1 at 2015-12-06 21:51:35 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 21:51:35 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (19.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 648ms (Views: 645.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 21:51:38 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (957.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 1205ms (Views: 1203.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 21:51:51 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m+92c22MYseS/2IGqKiMIoJxzl770ebb2F9CWE1ze4Gkp2eyARwA6WrUJwJOOH0OwksOZOOPKD2tp2HtZvXFvQ==", "session"=>{"email"=>"business@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "business@gmail.com"]]
+Redirected to http://localhost:3000/users/407
+Completed 302 Found in 113ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/407" for ::1 at 2015-12-06 21:51:51 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"407"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 407]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (63.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 346ms (Views: 337.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 21:51:53 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.4ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 407]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (5.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 175.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/items/new" for ::1 at 2015-12-06 21:51:54 -0500
+Processing by ItemsController#new as HTML
+  [1m[36mCategory Load (1.2ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  Rendered items/_form.html.erb (120.4ms)
+  Rendered items/new.html.erb within layouts/application (140.2ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (5.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 319ms (Views: 313.6ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/items" for ::1 at 2015-12-06 21:52:03 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sHaFp/U4BVCtjrOzwy3dHrE6YOr/p0J/0hatbISUKb6PPpRmmahnflWl9rclvSwy8QCg0Of5jJmn7o7ZrxKXgg==", "item"=>{"title"=>"test", "inventory"=>"1", "description"=>"test", "category_id"=>"4", "business_id"=>"407"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (21.7ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "business_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test"], ["inventory", 1], ["description", "test"], ["business_id", 407], ["category_id", 4], ["created_at", "2015-12-07 02:52:03.089239"], ["updated_at", "2015-12-07 02:52:03.089239"]]
+  [1m[35m (34.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/361
+Completed 302 Found in 64ms (ActiveRecord: 56.8ms)
+
+
+Started GET "/items/361" for ::1 at 2015-12-06 21:52:03 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"361"}
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 361]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered items/show.html.erb within layouts/application (10.4ms)
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 172ms (Views: 167.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/items/new" for ::1 at 2015-12-06 21:52:05 -0500
+Processing by ItemsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  Rendered items/_form.html.erb (5.9ms)
+  Rendered items/new.html.erb within layouts/application (8.1ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 135.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/items" for ::1 at 2015-12-06 21:52:12 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZauhW2fIUSHYe69AWBHpGQPoLS1PHPCyrhfyi3YPVlla47CaC1gzDyBQ6kS+gRg1Q9LtF1dCPlTb79E+XYnoZQ==", "item"=>{"title"=>"test1", "inventory"=>"1", "description"=>"test", "category_id"=>"4", "business_id"=>"407"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "business_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test1"], ["inventory", 1], ["description", "test"], ["business_id", 407], ["category_id", 4], ["created_at", "2015-12-07 02:52:12.036236"], ["updated_at", "2015-12-07 02:52:12.036236"]]
+  [1m[35m (14.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/362
+Completed 302 Found in 21ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/items/362" for ::1 at 2015-12-06 21:52:12 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"362"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 362]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered items/show.html.erb within layouts/application (5.3ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 150ms (Views: 146.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/items/new" for ::1 at 2015-12-06 21:52:13 -0500
+Processing by ItemsController#new as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories"  ORDER BY name[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  Rendered items/_form.html.erb (4.9ms)
+  Rendered items/new.html.erb within layouts/application (7.2ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 149.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/items" for ::1 at 2015-12-06 21:52:20 -0500
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tAqEfnuF+47H9FvIZbCg6KJATEttAcxIeO+qEnyS12eLQpW/FxWZoD/fHsyDIFHE4nqMcXVfAq4NF4mnVxRpWw==", "item"=>{"title"=>"test2", "inventory"=>"1", "description"=>"test", "category_id"=>"4", "business_id"=>"407"}, "commit"=>"Submit"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "items" ("title", "inventory", "description", "business_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "test2"], ["inventory", 1], ["description", "test"], ["business_id", 407], ["category_id", 4], ["created_at", "2015-12-07 02:52:20.571025"], ["updated_at", "2015-12-07 02:52:20.571025"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/items/363
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/items/363" for ::1 at 2015-12-06 21:52:20 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"363"}
+  [1m[36mItem Load (0.4ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 363]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered items/show.html.erb within layouts/application (4.5ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 152ms (Views: 149.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 21:56:35 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.6ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (5.2ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 407]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 407]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 407]]
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 628ms (Views: 624.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 21:56:47 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 21:56:48 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 324ms (Views: 322.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for ::1 at 2015-12-06 21:56:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form_errors.html.erb (0.9ms)
+  Rendered users/_form_get_organization_name.html.erb (1.3ms)
+  Rendered users/_form_account_info.html.erb (3.7ms)
+  Rendered users/_form_select_organization.html.erb (1.2ms)
+  Rendered users/_form_organization_account_info.html.erb (60.8ms)
+  Rendered users/new.html.erb within layouts/application (119.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 303ms (Views: 300.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2015-12-06 21:57:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/DsP/k06B4sNuBny1z2M6mKymarOYVNpU19zOPI+N97Dcx4/IaplpfWTXPYxrX3GIohZkNY/nY8mp1CN2biJ4g==", "user"=>{"name"=>"test business", "email"=>"business@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"x", "address"=>"x", "city"=>"x", "state"=>"x", "zip"=>"x"}, "organization"=>"Business", "commit"=>"Sign Up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (34.8ms)[0m  [1mINSERT INTO "users" ("name", "email", "address", "zip", "phone", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "test business"], ["email", "business@gmail.com"], ["address", "x"], ["zip", "x"], ["phone", "x"], ["city", "x"], ["state", "x"], ["password_digest", "$2a$10$dQ8yRu9MyZQPbTaTk1/LF.X2gUctQ9oozNa8duLBy8T25Nwy6BZjO"], ["created_at", "2015-12-07 02:57:07.554328"], ["updated_at", "2015-12-07 02:57:07.554328"]]
+  [1m[35m (5.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["user_id", 408], ["created_at", "2015-12-07 02:57:07.598471"], ["updated_at", "2015-12-07 02:57:07.598471"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/408
+Completed 302 Found in 134ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/users/408" for ::1 at 2015-12-06 21:57:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"408"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 408]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 408]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 408]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 408]]
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 408]]
+  Rendered layouts/_header.html.erb (7.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 165.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 21:57:09 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 21:57:09 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 143.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for ::1 at 2015-12-06 21:57:11 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form_errors.html.erb (0.1ms)
+  Rendered users/_form_get_organization_name.html.erb (0.7ms)
+  Rendered users/_form_account_info.html.erb (3.0ms)
+  Rendered users/_form_select_organization.html.erb (0.4ms)
+  Rendered users/_form_organization_account_info.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (34.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 168ms (Views: 166.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2015-12-06 21:57:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1G/jfW9N7oHVXUJmNVHgosl9xn1v8XiV1SZTdb65lDrrJ/K8A92Mry12B2LTwRGOiUcGR3evtnOg3nDAlT8qBg==", "user"=>{"name"=>"test2 business", "email"=>"business@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"x", "address"=>"x", "city"=>"x", "state"=>"x", "zip"=>"x"}, "organization"=>"Business", "commit"=>"Sign Up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "address", "zip", "phone", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "test2 business"], ["email", "business@gmail.com"], ["address", "x"], ["zip", "x"], ["phone", "x"], ["city", "x"], ["state", "x"], ["password_digest", "$2a$10$7L6j.rDIit6pO1Mn5XMhOuQT.VUvp4a7gi2gMUSloqwpDoIeDn0wC"], ["created_at", "2015-12-07 02:57:24.875923"], ["updated_at", "2015-12-07 02:57:24.875923"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "businesses" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 409], ["created_at", "2015-12-07 02:57:24.879365"], ["updated_at", "2015-12-07 02:57:24.879365"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/409
+Completed 302 Found in 94ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/409" for ::1 at 2015-12-06 21:57:24 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"409"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 409]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 409]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 409]]
+  [1m[35mCharity Load (0.4ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 409]]
+  [1m[36mBusiness Load (0.4ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 409]]
+  Rendered layouts/_header.html.erb (6.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 123ms (Views: 119.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 22:25:19 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 22:25:20 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (21.9ms)
+  Rendered layouts/_flashmessages.html.erb (0.3ms)
+Completed 200 OK in 717ms (Views: 714.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 22:25:22 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 199ms (Views: 197.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup" for ::1 at 2015-12-06 22:25:31 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form_errors.html.erb (0.2ms)
+  Rendered users/_form_get_organization_name.html.erb (1.7ms)
+  Rendered users/_form_account_info.html.erb (1.9ms)
+  Rendered users/_form_select_organization.html.erb (0.9ms)
+  Rendered users/_form_organization_account_info.html.erb (3.9ms)
+  Rendered users/new.html.erb within layouts/application (234.4ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 435ms (Views: 420.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users" for ::1 at 2015-12-06 22:25:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AWuwEY+I0hd8jF9HH0vYYH1swqAnrK281dGSXRRUiTI+I6HQ4xiwOYSnGkP52ylMPVYCmj/yY1qgKbHoP9I3Dg==", "user"=>{"name"=>"Test Charity", "email"=>"charity@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "phone"=>"x", "address"=>"x", "city"=>"x", "state"=>"x", "zip"=>"x"}, "organization"=>"Charity", "commit"=>"Sign Up"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("name", "email", "address", "zip", "phone", "city", "state", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"  [["name", "Test Charity"], ["email", "charity@gmail.com"], ["address", "x"], ["zip", "x"], ["phone", "x"], ["city", "x"], ["state", "x"], ["password_digest", "$2a$10$/kr4I3G1DvB3eRN0F0hKOeD9Uw3EqLmYICMpcIViHZAzgHx6CcTfe"], ["created_at", "2015-12-07 03:25:47.609456"], ["updated_at", "2015-12-07 03:25:47.609456"]]
+  [1m[36m (933.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "charities" ("user_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["user_id", 410], ["created_at", "2015-12-07 03:25:48.558563"], ["updated_at", "2015-12-07 03:25:48.558563"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/410
+Completed 302 Found in 1039ms (ActiveRecord: 937.3ms)
+
+
+Started GET "/users/410" for ::1 at 2015-12-06 22:25:48 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"410"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (76.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 238ms (Views: 231.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 22:29:47 -0500
+Processing by ItemsController#index as HTML
+  [1m[35mItem Load (0.5ms)[0m  SELECT "items".* FROM "items"
+  Rendered items/index.html.erb within layouts/application (11.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mBusiness Load (0.3ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 192ms (Views: 168.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/361" for ::1 at 2015-12-06 22:29:49 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"361"}
+  [1m[36mItem Load (0.5ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 361]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mBusiness Load (0.3ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mCategory Load (0.3ms)[0m  [1mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  Rendered items/show.html.erb within layouts/application (18.6ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 152ms (Views: 146.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/line_items?item_id=361" for ::1 at 2015-12-06 22:29:50 -0500
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"B4POrFHbxJs8o8BRlpKgDgNf3ClVeDiveThAGKzdbpA4y99tPUumtcSIhVVwAlEiQ2UcE00m9kkMwGOth1vQrA==", "item_id"=>"361"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "carts" ("charity_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["charity_id", 202], ["created_at", "2015-12-07 03:29:50.615862"], ["updated_at", "2015-12-07 03:29:50.615862"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 361]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 361]]
+  [1m[35mItem Exists (0.8ms)[0m  SELECT  1 AS one FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1 AND "items"."id" = $2 LIMIT 1  [["cart_id", 13], ["id", 361]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["cart_id", 13], ["item_id", 361], ["created_at", "2015-12-07 03:29:50.745916"], ["updated_at", "2015-12-07 03:29:50.745916"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT  "line_items".* FROM "line_items" WHERE "line_items"."item_id" = $1 AND "line_items"."cart_id" = $2 LIMIT 1  [["item_id", 361], ["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3  [["quantity", 1], ["updated_at", "2015-12-07 03:29:50.751421"], ["id", 26]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/carts/13
+Completed 302 Found in 156ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/carts/13" for ::1 at 2015-12-06 22:29:50 -0500
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1[0m  [["cart_id", 13]]
+  [1m[35mItem Load (0.3ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 361]]
+  Rendered carts/show.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 13]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (11.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 237ms (Views: 232.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/orders" for ::1 at 2015-12-06 22:29:53 -0500
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"XcHEi7z43kMjaq0cVBZv7jwwxhEgGoUB0t6iH1uZj49iidVK0Gi8bdtB6Biyhp7CfAoGKzhES+enJoGqcB8xsw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."charity_id" = $1 LIMIT 1[0m  [["charity_id", 202]]
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 AND "orders"."cart_id" = $2 AND "orders"."charity_id" = $3 LIMIT 1  [["id", 13], ["cart_id", 13], ["charity_id", 202]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "orders" ("id", "cart_id", "charity_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["id", 13], ["cart_id", 13], ["charity_id", 202], ["created_at", "2015-12-07 03:29:53.244217"], ["updated_at", "2015-12-07 03:29:53.244217"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "carts" WHERE "carts"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "orders" SET "status" = $1, "updated_at" = $2 WHERE "orders"."id" = $3  [["status", "submitted"], ["updated_at", "2015-12-07 03:29:53.253108"], ["id", 13]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/410
+Completed 302 Found in 31ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/users/410" for ::1 at 2015-12-06 22:29:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"410"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mCharity Load (0.2ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 152ms (Views: 148.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items" for ::1 at 2015-12-06 22:45:26 -0500
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (0.9ms)[0m  [1mSELECT "items".* FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (34.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (136.0ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 990ms (Views: 962.1ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/items/350" for ::1 at 2015-12-06 22:45:31 -0500
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"350"}
+  [1m[35mItem Load (0.4ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 350]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mCategory Load (0.3ms)[0m  SELECT  "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  Rendered items/show.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 197ms (Views: 191.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/line_items?item_id=350" for ::1 at 2015-12-06 22:45:32 -0500
+Processing by LineItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"BMX0ppwFCdf47BgY9dWsaQxSRdBUCfSumzmdXAcA6/Q7jeVn8JVr+QDHXRwTRV1FTGiF6kxXOkjuwb7pLIZVyA==", "item_id"=>"350"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mCharity Load (0.4ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "carts" ("charity_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["charity_id", 202], ["created_at", "2015-12-07 03:45:32.905329"], ["updated_at", "2015-12-07 03:45:32.905329"]]
+  [1m[35m (28.6ms)[0m  COMMIT
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1  [["id", 14]]
+  [1m[36mItem Load (0.2ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 350]]
+  [1m[35mItem Load (0.2ms)[0m  SELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1  [["id", 350]]
+  [1m[36mItem Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "items" INNER JOIN "line_items" ON "items"."id" = "line_items"."item_id" WHERE "line_items"."cart_id" = $1 AND "items"."id" = $2 LIMIT 1[0m  [["cart_id", 14], ["id", 350]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "item_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["cart_id", 14], ["item_id", 350], ["created_at", "2015-12-07 03:45:32.984138"], ["updated_at", "2015-12-07 03:45:32.984138"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT  "line_items".* FROM "line_items" WHERE "line_items"."item_id" = $1 AND "line_items"."cart_id" = $2 LIMIT 1[0m  [["item_id", 350], ["cart_id", 14]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "line_items" SET "quantity" = $1, "updated_at" = $2 WHERE "line_items"."id" = $3[0m  [["quantity", 1], ["updated_at", "2015-12-07 03:45:32.991179"], ["id", 27]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/carts/14
+Completed 302 Found in 121ms (ActiveRecord: 37.8ms)
+
+
+Started GET "/carts/14" for ::1 at 2015-12-06 22:45:33 -0500
+Processing by CartsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "line_items".* FROM "line_items" WHERE "line_items"."cart_id" = $1  [["cart_id", 14]]
+  [1m[36mItem Load (0.3ms)[0m  [1mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT 1[0m  [["id", 350]]
+  Rendered carts/show.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "carts" WHERE "carts"."id" = $1  [["id", 14]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35mCharity Load (0.2ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (10.1ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 191ms (Views: 186.8ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/orders" for ::1 at 2015-12-06 22:45:34 -0500
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"kIVrO+4RDqyoPM6jx2suFT9wHQ1NODlLzOGNGc5eZw+vzXr6goFsglAXi6ch+985f0rdN1Vm9625Ga6s5djZMw=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts" WHERE "carts"."charity_id" = $1 LIMIT 1  [["charity_id", 202]]
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 AND "orders"."cart_id" = $2 AND "orders"."charity_id" = $3 LIMIT 1[0m  [["id", 14], ["cart_id", 14], ["charity_id", 202]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "orders" ("id", "cart_id", "charity_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 14], ["cart_id", 14], ["charity_id", 202], ["created_at", "2015-12-07 03:45:34.809270"], ["updated_at", "2015-12-07 03:45:34.809270"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "carts" WHERE "carts"."id" = $1  [["id", 14]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "orders" SET "status" = $1, "updated_at" = $2 WHERE "orders"."id" = $3[0m  [["status", "submitted"], ["updated_at", "2015-12-07 03:45:34.814829"], ["id", 14]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/410
+Completed 302 Found in 44ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/users/410" for ::1 at 2015-12-06 22:45:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"410"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 410]]
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 410]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 410]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 410]]
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 169ms (Views: 165.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-06 22:47:56 -0500
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-06 22:47:57 -0500
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  Rendered layouts/_header.html.erb (19.5ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 734ms (Views: 731.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for ::1 at 2015-12-06 22:47:59 -0500
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 227ms (Views: 225.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/login" for ::1 at 2015-12-06 22:48:09 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tkcPdSXBYcjOG1aNGw/tYPDIB8zWk5nKDrtTzj+J9ImJDx60SVED5jYwE4n9nxxMsPLH9s7NVyx7Q3B7FA9KtQ==", "session"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "admin@gmail.com"]]
+Redirected to http://localhost:3000/users/405
+Completed 302 Found in 101ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/405" for ::1 at 2015-12-06 22:48:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"405"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 405]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 405]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1[0m  [["user_id", 405]]
+  [1m[35mCharity Load (0.3ms)[0m  SELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1  [["user_id", 405]]
+  [1m[36mBusiness Load (0.2ms)[0m  [1mSELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1[0m  [["user_id", 405]]
+  Rendered layouts/_header.html.erb (70.2ms)
+  Rendered layouts/_flashmessages.html.erb (0.1ms)
+Completed 200 OK in 230ms (Views: 221.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/admin" for ::1 at 2015-12-06 22:48:12 -0500
+Processing by AdminController#index as HTML
+  [1m[35mAdmin Load (0.5ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" IS NULL LIMIT 1
+  Rendered admin/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 405]]
+  [1m[35mAdmin Load (0.4ms)[0m  SELECT  "admins".* FROM "admins" WHERE "admins"."user_id" = $1 LIMIT 1  [["user_id", 405]]
+  [1m[36mCharity Load (0.3ms)[0m  [1mSELECT  "charities".* FROM "charities" WHERE "charities"."user_id" = $1 LIMIT 1[0m  [["user_id", 405]]
+  [1m[35mBusiness Load (0.2ms)[0m  SELECT  "businesses".* FROM "businesses" WHERE "businesses"."user_id" = $1 LIMIT 1  [["user_id", 405]]
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_flashmessages.html.erb (0.2ms)
+Completed 200 OK in 216ms (Views: 188.2ms | ActiveRecord: 1.7ms)
