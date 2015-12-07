@@ -79,11 +79,11 @@ Weekend:
 - [X] order confirmation after checking out - lesley
 - [X] order history show page - natalie & austin
 - [X] decrement - natalie & austin
-- [] update search for item name and categories (categories dropdown) - lesley
+- [X] update search for item name and categories (categories dropdown) - lesley
 - [X] add item history for business view - tatiana
 - [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 - [] fix add category error
 - [X] permissions lesly
 - [] only show profile edit button if you're logged in
-- [] indication of Business or charity
+- [] indication of Business or charity on profile page
 - [] can carts be hacked?

@@ -1,8 +1,15 @@
 class ItemsController < ApplicationController
-	before_action :validate_business?, only: [:new, :create, :edit]
+	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
 			  @items = Item.all
+           
+	end
+
+	def business_items
+		@user = User.find(session[:user_id]) 
+		@items = Item.where(business_id: @user.id)
+    
 	end
 
 	def new
@@ -11,7 +18,7 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = Item.new(item_params)
-
+    
 		if @item.save
 			redirect_to @item
 		else

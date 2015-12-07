@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
-  before_action :validate_charity?, only: [:new,:create, :edit, :show]
+  before_action :valid_charity?, only: [:new,:create, :edit, :show]
+
 	def index
 		@user = User.find(session[:user_id])
 		@orders = @user.charity.orders
@@ -18,9 +19,9 @@ class OrdersController < ApplicationController
 
 		if @order
             @cart_items = []
-            @cart.items.each do |item| 
+            @cart.items.each do |item|
             	@cart_items << item.title
-        	end 
+        	end
             UserMailer.order_email(@user,@cart_items).deliver_later
 
          	@cart.checkout(@order)
@@ -35,7 +36,6 @@ class OrdersController < ApplicationController
 	end
 
 	private
-
 	def order_params
 		params.require(:order).permit(:status, :cart_id)
 	end
