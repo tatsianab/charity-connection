@@ -17,5 +17,9 @@ class Cart < ActiveRecord::Base
 		line_item.save
 		line_item
 	end
-    
+
+	def checkout(order)
+        order.change_inventory(self)
+        order.change_order_status
+    end   
 end

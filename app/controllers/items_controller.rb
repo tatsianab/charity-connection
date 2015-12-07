@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
 			  @items = Item.all
@@ -33,11 +34,11 @@ class ItemsController < ApplicationController
     	@item = Item.find(params[:id])
 		if @item.update_attributes(item_params)
 	 	   redirect_to @item
-	 	else 
-	 		flash[:notice] = "Sorry, we cant update this item" 
-    		render 'edit'  
+	 	else
+	 		flash[:notice] = "Sorry, we cant update this item"
+    		render 'edit'
   		end
-	end	
+	end
 
 	def destroy
 		@item = Item.find(params[:id])
