@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admin, only: [:index]
   resources :users, except: [:new]
   resources :items
   resources :categories
