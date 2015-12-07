@@ -35,6 +35,7 @@ gem 'pry'
 gem 'fabrication'
 gem 'faker'
 gem 'rspec-rails', group: [:development, :test]
+gem 'actionmailer'
 
 gem "factory_girl_rails", "~> 4.0"
 
