@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :validate_charity?, only: [:new,:create, :edit]
+  before_action :validate_charity?, only: [:new,:create, :edit, :show]
 
 	def new
 		@order = Order.new
@@ -13,35 +13,30 @@ class OrdersController < ApplicationController
 		@order = Order.create_from_cart(@cart, @charity)
 
 		if @order
-	     
-           @cart_items = []
-            @cart.items.each do |item| 
-            	@cart_items << item.title
-            	end 
-             
-            respond_to do |format|
-            # Tell the UserMailer to send a welcome email after save
-            UserMailer.order_email(@user,@cart_items).deliver_later
-            
-            format.html { redirect_to(@user, notice: 'Your order was confirmed.') }
-            format.json { render json: @user, status: :created, location: @user }
-             # binding.pry
+        @cart_items = []
+        @cart.items.each do |item|
+              @cart_items << item.title
+        end
 
+        UserMailer.order_email(@user,@cart_items).deliver_later
 
-         end
+  			session.delete(:cart_id)
+  			@order.change_inventory(@cart)
+  			@order.change_order_status
 
-			session.delete(:cart_id)
-			@order.change_inventory(@cart)
-			@order.change_order_status
-			# redirect_to @user
+        redirect_to @order
+
 		else
 			flash[:notice] = "I'm sorry, this order could not be checked out."
 		end
 	end
 
 	def show
-		@user = User.find(session[:user_id])
-		@orders = @user.charity.orders
+
+    @order = Order.find(params[:id])
+    # session[:order_id] = nil
+		# @user = User.find(session[:user_id])
+		# @orders = @user.charity.orders
 	end
 
 	private
