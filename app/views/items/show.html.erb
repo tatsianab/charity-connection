@@ -1,8 +1,15 @@
 <h1><%= @item.title %></h1> 
-<%= link_to 'edit', edit_item_path(@item) %> 
-<%= link_to 'delete', item_path(@item), method: :delete %>
+
+<% if (current_user.business && @item.business_id == current_user.id) || current_user.admin%>
+	<%= link_to 'edit', edit_item_path(@item) %> 
+	<%= link_to 'delete', item_path(@item), method: :delete %>
+<% end %>
+
 <p>Inventory: <%=@item.inventory%></p>
 <p>Description: <%= @item.description %></p>
 <p>Category: <%= @item.category.name %></p>
 <p><img src="<%=@item.photo_url%>"/></p>
-<%= button_to 'Add to Cart', line_items_path(item_id: @item) %>
+
+<% if current_user.charity %>
+	<%= button_to 'Add to Cart', line_items_path(item_id: @item) %>
+<% end %>
