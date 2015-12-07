@@ -57,10 +57,10 @@ Weekend:
 - [X] fix errors with submitting blank forms
 
 # Features
-- [ ] action-mailer
-	- [] send one email to charity upon order confirmation
-	- [] send one email to business after charity has accepted their item
-- [ ] google maps
+- [X ] action-mailer
+	- [X] send one email to charity upon order confirmation
+	- [X] send one email to business after charity has accepted their item
+- [] google maps
 	-[] add map of business location to items index
 	-[] add google maps to charity/business home pages
 	-[] add google maps to order success page showing order locations
@@ -76,11 +76,11 @@ Weekend:
 - [X] add font awesome gem/run bundle install - natalie
 - [] hidden edit form for user edit page
 - [X] format phone number/phone field - austin
-- [] visit order show page after checking out - lesley
-- [] order history show page - natalie & austin
-- [] decrement - natalie & austin
+- [X] order confirmation after checking out - lesley
+- [X] order history show page - natalie & austin
+- [X] decrement - natalie & austin
 - [] update search for item name and categories (categories dropdown) - lesley
-- [] add item history for business view - tatiana
+- [X] add item history for business view - tatiana
 - [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 - [] fix add category error
 - [X] permissions lesly
