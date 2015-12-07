@@ -2,6 +2,13 @@ class ItemsController < ApplicationController
 
 	def index
 			  @items = Item.all
+           
+	end
+
+	def business_items
+		@user = User.find(session[:user_id]) 
+		@items = Item.where(business_id: @user.id)
+    
 	end
 
 	def new
@@ -10,7 +17,7 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = Item.new(item_params)
-
+    
 		if @item.save
 			redirect_to @item
 		else

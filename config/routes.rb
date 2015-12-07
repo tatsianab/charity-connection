@@ -11,12 +11,14 @@ Rails.application.routes.draw do
 
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
   get '/carts/:id', to: 'carts#show', as: 'view_cart'
-
+  get '/users/:id/items', to: 'items#business_items', as: 'business_items'
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
   post '/login', to: 'sessions#create'
 
   get '/signup', to: 'users#new', as: "signup"
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
