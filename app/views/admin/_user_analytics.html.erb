@@ -1,0 +1,19 @@
+<div class='col-xs-4'>
+	<table class="table table-condensed">
+	    <tr>
+	      <td class='col-md-2'></td>
+	      <td>Number of users: <%= @admin.number_of_users(@users) %></td>
+	    </tr>
+
+	    <tr>
+	      <td class='col-md-2'></td>
+	      <td>Number of registered businesses: <%= @admin.number_of_business_users(@users) %></td>
+	    </tr>
+
+	    <tr>
+	      <td class='col-md-2'></i></td>
+	      <td>Number of registered charities: <%= @admin.number_of_charity_users(@users) %></td>
+	    </tr>
+	    
+	</table>
+</div>

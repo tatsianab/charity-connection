@@ -1,13 +1,15 @@
 <div class='col-xs-4'>
 	<table class="table table-condensed">
-	    <tr>
-	      <td class='col-md-2'></td>
-	      <td>Number of businesses making donations: <%= @admin.number_of_users(@users) %></td>
-	    </tr>
 
 	    <tr>
 	      <td class='col-md-2'></td>
-	      <td>Percentage of registered businesses that have donated items: %</td>
+	      <td>Number of charities accepting donations: <%= @admin.number_of_charities_accepting_donations(@orders) %></td>
+	    </tr>
+
+
+	    <tr>
+	      <td class='col-md-2'></td>
+	      <td>Percentage of charities that have accepted a donation: %</td>
 	    </tr>
 	    
 	</table>

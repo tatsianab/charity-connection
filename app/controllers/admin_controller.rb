@@ -1,10 +1,11 @@
 class AdminController < ApplicationController
 
 	def index
-		@admin = Admin.find_by(user_id: current_user.id)
+		@admin = Admin.all.first
 		@users = User.all
 		@items = Item.all
 		@orders = Order.all
+		@categories = Category.all
 	end
 
 	def show

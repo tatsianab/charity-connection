@@ -21,4 +21,8 @@ class Admin < ActiveRecord::Base
   	def number_of_charities_accepting_donations(orders)
   		orders.select(:charity_id).distinct.count
   	end
+
+  	def number_of_categories(categories)
+  		categories.count
+  	end
 end
