@@ -11,8 +11,10 @@
 				<% if current_cart %>
 					<li><%= link_to 'View My Cart', view_cart_path(current_cart)%></li>
 				<% end %>
-
-	    		<li><%= link_to 'Order History', orders_path %></li>
+				
+				<% if current_user.charity %>
+	    			<li><%= link_to 'Order History', orders_path %></li>
+	    		<% end %>
 
 	    	<% if current_user.business %>
 	    		<li><%= link_to "List Your Item", new_item_path %>

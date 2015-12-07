@@ -39,8 +39,17 @@ charity_range = (5..9).to_a
 	Charity.create(user_id: User.all[charity_range.pop].id)
 end
 
-User.create(name: 'Admin', email: 'admin@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '212-870-2578')
+#create admin account
+User.create(name: 'Admin', email: 'admin@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '888-958-0569')
 Admin.create(user_id: User.all[10].id)
+
+#create charity and business accounts for testing
+User.create(name: 'Flatiron Charity', email: 'charity@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '888-958-0569')
+Charity.create(user_id: User.all[11].id)
+User.create(name: 'Flatiron Business', email: 'business@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '888-958-0569')
+Business.create(user_id: User.all[12].id)
+
+
 
 Category.create(name: 'food', id: 1, admin_id: Admin.all.first.id)
 Category.create(name: 'electronics', id: 2, admin_id: Admin.all.first.id)
