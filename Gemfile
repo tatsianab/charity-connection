@@ -27,6 +27,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'figaro'
 gem 'awesome_print'
+gem "font-awesome-rails"
 gem 'better_errors'
 gem 'shoulda-matchers'
 gem 'capybara'

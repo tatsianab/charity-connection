@@ -56,11 +56,6 @@ Weekend:
 - [X] add business hidden field to item
 - [X] fix errors with submitting blank forms
 
-#To Do
-- [ ] order history
-- [ ] business item history page
-- [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
-
 # Features
 - [ ] action-mailer
 	- [] send one email to charity upon order confirmation
@@ -75,4 +70,17 @@ Weekend:
 - [] lazy loader
 
 #Revisit flow with lesley
-- [X] 
+- [ ] add image to home page and hide login/signup from navbar for logged out users/add new buttons for main page
+- [] update validations errors for signup page
+- [X] fix h1 on users_info partial - austin
+- [X] add font awesome gem/run bundle install - natalie
+- [] hidden edit form for user edit page
+- [X] format phone number/phone field - austin
+- [] visit order show page after checking out - lesley
+- [] order history show page - natalie & austin
+- [] decrement - natalie & austin
+- [] update search for item name and categories (categories dropdown) - lesley
+- [] add item history for business view - tatiana
+- [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
+- [] fix add category error
+- [] permissions lesly

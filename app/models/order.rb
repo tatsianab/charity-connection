@@ -14,7 +14,6 @@ class Order < ActiveRecord::Base
 
 	def change_inventory(cart)
 		cart.items.each do |item|
-			item = Item.find(item.id)
 			item.inventory -=1
 			item.save
 		end
