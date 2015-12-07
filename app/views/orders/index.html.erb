@@ -1,1 +1,15 @@
 <h1> Order History </h1>
+<hr>
+<% if !@orders.empty? %>
+	<% @orders.each do |order| %>
+		<h3>Order: <%= order.created_at %></h3>
+		<% order.items.each do |item| %>
+		<li>
+			<ul><%= item.title %></ul>
+		</li>
+		<% end %>
+	<% end %>
+<% else %>
+	<h3>It looks like you don't have any orders!</h3>
+	<p>Browser our <%=link_to 'items', items_path %> for anything you want.</p>
+<% end %>
