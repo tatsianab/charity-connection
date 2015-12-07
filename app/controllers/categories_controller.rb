@@ -19,9 +19,23 @@ class CategoriesController < ApplicationController
 	end
 
 	def edit
+		@category = Category.find(params[:id])
 	end
 
-	def delete
+	def update 
+    	@category = Category.find(params[:id])
+		if @category.update_attributes(category_params)
+	 	   redirect_to @category
+	 	else 
+	 		flash[:notice] = "Sorry, we cant update this category" 
+    		render 'edit'  
+  		end
+	end	
+
+	def destroy
+		@category = Category.find(params[:id])
+		@category.destroy
+		redirect_to categories_path
 	end
 
 	def show
@@ -31,7 +45,7 @@ class CategoriesController < ApplicationController
 	private
 
 	def category_params
-		params.require(:category).permit(:name)
+		params.require(:category).permit(:name, :admin_id)
 	end
 
 end

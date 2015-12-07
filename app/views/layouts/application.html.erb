@@ -9,9 +9,14 @@
 </head>
 <body>
 
-<%= render '/layouts/header', local:@user %>
-<%= render '/layouts/flashmessages' %>
-<%= yield %>
+
+<%= render '/layouts/header' %>
+
+<div class="container">
+
+	<%= render '/layouts/flashmessages' %>
+	<%= yield %>
+</div>
 
 </body>
 </html>

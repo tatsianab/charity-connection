@@ -42,11 +42,12 @@
 	- [ ] business/charity permission
 	- [ ] revisit flow (with Lesly)
 ##Minor Fixes
-	- [X] remove extra button tag in order page
-	- [] add business hidden field to item
-	- [] show items that business has submitted
-	- [] deleting items after order is successful
-	- [] fix errors with submitting blank forms
+- [] remove extra button tag in order page
+- [X] add business hidden field to item
+- [] show items that business has submitted
+- [] deleting items after order is successfull
+- [X] fix errors with submitting blank forms
+- [] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 
 # Features
 - [ ] action-mailer
@@ -56,8 +57,6 @@
 	-[] add map of business location to items index
 	-[] add google maps to charity/business home pages
 	-[] add google maps to order success page showing order locations
-- [ ] admin page -- Monday
-- [X] search controller? (maybe ember week)
 
 #Ember & Javascript/Ajax
 - [] ajax for carts controller
@@ -69,5 +68,12 @@
 ##This Weekend:
 Tatiana: action-mailer
 Austin: google maps
-Natalie: admin page
+Natalie: fix cart/checkout system + begin admin page
 Lesley: Search controller
+
+Weekend:
+-[] completes cart checkout process
+-[] adds business_id hidden field to items forms and admin_id field to category forms
+-[] begins adding admin functionality
+-[] fixes business/charity permissions
+- [X] search controller? (maybe ember week)

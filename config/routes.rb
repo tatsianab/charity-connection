@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :users, only: [:create, :show]
+  resources :admin, only: [:index]
+  resources :users, except: [:new]
   resources :items
   resources :categories
   root to: 'welcome#index'

@@ -11,18 +11,21 @@ class OrdersController < ApplicationController
 		@user = User.find(session[:user_id])
 		@charity = @user.charity
 		@cart = Cart.find_by(charity_id: @charity.id)
-		@order = Order.create(status: "submitted", cart:@cart)
+		@order = Order.create_from_cart(@cart, @charity)
 
 		if @order
-			redirect_to @order
+			session.delete(:cart_id)
+			@order.change_inventory(@cart)
+			@order.change_order_status
+			redirect_to @user
+		else
+			flash[:notice] = "I'm sorry, this order could not be checkout out."
 		end
 	end
 
 	def show
 		@user = User.find(session[:user_id])
-		@charity = @user.charity
-		@cart = Cart.find_by(charity_id: @charity.id)
-		@order = Order.where(cart_id: @cart.id)
+		@orders = @user.charity.orders
 	end
 
 	private
