@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-
+  before_action :require_login
 	def index
 		@admin = Admin.all.first
 		@users = User.all
@@ -16,7 +16,7 @@ class AdminController < ApplicationController
 			redirect_to signup_path
 		elsif !@user.admin
 			flash[:alert] = "I'm sorry, you must be registered as an admin to view this page."
-			redirect_to signup_path	
+			redirect_to signup_path
 		end
 	end
 end

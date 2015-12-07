@@ -1,0 +1,21 @@
+<html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <h1>Dear, <%= @user.name %></h1>
+      
+      <p>
+         You Order was confirmed.
+         Your item(s): 
+         <% @cart_items.each do |item| %>
+        <p> <%= item %> </p>
+          <% end%> 
+          is(are) ready for pick up.
+      </p>
+      
+      
+   </body>
+</html>

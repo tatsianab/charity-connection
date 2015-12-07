@@ -18,4 +18,26 @@ module SessionsHelper
     def logged_in?
         !current_user.nil?
     end
+
+    def require_login
+      unless logged_in? && params[:id] == session[:user_id].to_s
+        flash[:error] = "You must be logged as this user to complete this action"
+        redirect_to '/login'
+      end
+    end
+
+    def validate_charity?
+      if Charity.where(user_id: session[:user_id]).empty?
+        flash[:notice] = "You must be logged in as a Charity to order an item"
+        redirect_to '/login'
+      end
+    end
+
+    def validate_business?
+      if Business.where(user_id: session[:user_id]).empty?
+        flash[:notice] = "You must be logged in as a Business to list an item"
+        redirect_to '/login'
+      end
+    end
+
 end
