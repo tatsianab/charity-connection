@@ -1,13 +1,7 @@
 <h1>My cart</h1>
-<% if current_cart.empty? %>
-	You have no items in your cart.
-<% else %>
+<% @current_cart.line_items.each do |line_item| %>
+  <li>Item: <%= line_item.item.title %>
+  <p>Inventory: <%= line_item.item.inventory %></p></li>
+  <% end %>
 
-	<% @current_cart.line_items.each do |line_item| %>
-	  <li>Item: <%= line_item.item.title %>
-	  <p>Inventory: <%= line_item.item.inventory %></p></li>
-	  <% end %>
-
-	<button><%= button_to "Checkout", orders_path %></button>
-	
-<% end %>
+<button><%= button_to "Checkout", orders_path %></button>
