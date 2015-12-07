@@ -14,6 +14,7 @@ Category.destroy_all
 Cart.destroy_all
 LineItem.destroy_all
 Order.destroy_all
+Admin.destroy_all
 
 
 Fabricator(:user) do 
@@ -41,10 +42,10 @@ end
 User.create(name: 'Admin', email: 'admin@gmail.com', password: 'test', password_confirmation: 'test', address: '11 Broadway', city: 'New York', state: 'NY', zip: '10004', phone: '212-870-2578')
 Admin.create(user_id: User.all[10].id)
 
-Category.create(name: 'food', id: 1)
-Category.create(name: 'electronics', id: 2)
-Category.create(name: 'furniture', id: 3)
-Category.create(name: 'clothes', id: 4)
+Category.create(name: 'food', id: 1, admin_id: Admin.all.first.id)
+Category.create(name: 'electronics', id: 2, admin_id: Admin.all.first.id)
+Category.create(name: 'furniture', id: 3, admin_id: Admin.all.first.id)
+Category.create(name: 'clothes', id: 4, admin_id: Admin.all.first.id)
 
 Fabricator(:item) do
 	title {Faker::Commerce.product_name}
