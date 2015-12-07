@@ -14,8 +14,12 @@ class Order < ActiveRecord::Base
 
 	def change_inventory(cart)
 		cart.items.each do |item|
-			item.inventory -=1
-			item.save
+			if item.inventory > 0
+				item.inventory -=1
+				item.save
+			else
+				item.destroy
+			end
 		end
 	end
 
