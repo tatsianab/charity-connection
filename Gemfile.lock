@@ -190,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   awesome_print
   bcrypt (~> 3.1.7)
   better_errors

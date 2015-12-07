@@ -16,5 +16,5 @@ class Cart < ActiveRecord::Base
 		line_item.save
 		line_item
 	end
-
+    
 end
