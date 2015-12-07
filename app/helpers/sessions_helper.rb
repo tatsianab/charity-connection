@@ -5,8 +5,10 @@ module SessionsHelper
 
     def log_out
         session.delete(:user_id)
-        @current_user = nil
-        redirect_to root_url
+        session.delete(:cart_id)
+        session.clear
+        current_cart = nil
+        current_user = nil
     end
 
     def current_user
