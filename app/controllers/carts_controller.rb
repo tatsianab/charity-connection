@@ -10,6 +10,4 @@ class CartsController < ApplicationController
         @current_cart.destroy
         redirect_to(items)
     end
-
-
 end
