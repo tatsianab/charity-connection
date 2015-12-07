@@ -36,7 +36,6 @@ class OrdersController < ApplicationController
 	end
 
 	private
-
 	def order_params
 		params.require(:order).permit(:status, :cart_id)
 	end
