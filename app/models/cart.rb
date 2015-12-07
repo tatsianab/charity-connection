@@ -1,4 +1,5 @@
 class Cart < ActiveRecord::Base
+	belongs_to :charity
 	has_one :order
 	has_many :line_items
 	has_many :items, through: :line_items

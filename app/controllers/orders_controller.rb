@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
 		@user = User.find(session[:user_id])
 		@charity = @user.charity
 		@cart = Cart.find_by(charity_id: @charity.id)
-		binding.pry
 		@order = Order.create_from_cart(@cart, @charity)
 
 		if @order
