@@ -39,9 +39,15 @@
 
 					<% if current_page?(controller: 'items') || current_page?(controller: 'search') %>
 	    				<%= form_tag search_index_path, method: :get, class: "navbar-form navbar-right search-form" do %>
-	    					<%= text_field_tag(:search, params[:search], placeholder: "Search", class: "form-control") %>
-	    					<%= submit_tag( "Search", class: "form-control") %>
+    	    					<%= text_field_tag(:item_search, params[:item_search], placeholder: "Search", class: "form-control") %>
+    	    					<%= submit_tag( "Search", class: "form-control") %>
   						<% end %>
+
+              <%= form_tag search_index_path, method: :get, class: "navbar-form navbar-right search-form" do %>
+                <%= select_tag(:category_search, options_for_select([['Food'], ['Electronics'], ['Furniture'], ['clothes']])) %>
+                <%= submit_tag( "Browse", class: "form-control") %>
+              <% end %>
+
   					<% end %>
 
 					<li><li><%= link_to "Log Out", logout_path %></li></li>

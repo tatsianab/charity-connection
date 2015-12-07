@@ -76,14 +76,14 @@ Weekend:
 - [X] add font awesome gem/run bundle install - natalie
 - [] hidden edit form for user edit page
 - [X] format phone number/phone field - austin
-- [] visit order show page after checking out - lesley
+- [X] visit order show page after checking out - lesley
 - [] order history show page - natalie & austin
 - [] decrement - natalie & austin
-- [] update search for item name and categories (categories dropdown) - lesley
+- [X] update search for item name and categories (categories dropdown) - lesley
 - [] add item history for business view - tatiana
 - [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 - [] fix add category error
 - [X] permissions lesly
 - [] only show profile edit button if you're logged in
-- [] indication of Business or charity
+- [] indication of Business or charity on profile page
 - [] can carts be hacked?

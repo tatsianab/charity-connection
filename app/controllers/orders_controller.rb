@@ -32,11 +32,7 @@ class OrdersController < ApplicationController
 	end
 
 	def show
-
     @order = Order.find(params[:id])
-    # session[:order_id] = nil
-		# @user = User.find(session[:user_id])
-		# @orders = @user.charity.orders
 	end
 
 	private
