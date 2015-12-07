@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
 
-	def index
-	end
+  before_action :validate_charity?, only: [:new,:create, :edit]
 
 	def new
 		@order = Order.new
@@ -20,7 +19,7 @@ class OrdersController < ApplicationController
 			@order.change_order_status
 			redirect_to @user
 		else
-			flash[:notice] = "I'm sorry, this order could not be checkout out."
+			flash[:notice] = "I'm sorry, this order could not be checked out."
 		end
 	end
 
