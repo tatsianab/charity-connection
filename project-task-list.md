@@ -83,4 +83,4 @@ Weekend:
 - [] add item history for business view - tatiana
 - [ ] do we want businesses to see all items (if yes separate business items from all, if no only show business items) - view object?
 - [] fix add category error
-
+- [] permissions lesly
