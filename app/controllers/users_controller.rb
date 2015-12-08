@@ -8,10 +8,23 @@ class UsersController < ApplicationController
 
 	def create
 		organization = params[:organization]
-
+     if @omni_user = GoogleOmniauthTable.find_by(id: session[:user_id])
+     	  @user = User.new(name: @omni_user.name, email: @omni_user.email)
+        @user.phone = user_params[:phone]
+        @user.address = user_params[:address]
+        @user.city = user_params[:city]  
+        @user.state = user_params[:state]
+        @user.zip = user_params[:zip]
+        @user.password_digest = @omni_user.oauth_token
+     else	  
 	    @user = User.new(user_params)
-
+    end
 	    if @user.save
+	    	 session[:user_id] = @user.id
+		     if @omni_user 
+			    	 @omni_user.user = @user
+			    	 @omni_user.save
+		     end 
 	       @user.create_business_or_charity(@user, organization)
 	       log_in(@user)
 	       redirect_to @user
@@ -20,7 +33,7 @@ class UsersController < ApplicationController
 	       render 'new'
 	    end
   	end
-
+ 
 	def show
 		@user = User.find_by_id(params[:id])
 

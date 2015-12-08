@@ -12,11 +12,26 @@ Rails.application.routes.draw do
   post 'carts/:id/checkout', to: 'carts#checkout', as: 'checkout'
   get '/carts/:id', to: 'carts#show', as: 'view_cart'
   get '/users/:id/items', to: 'items#business_items', as: 'business_items'
+
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
   post '/login', to: 'sessions#create'
 
   get '/signup', to: 'users#new', as: "signup"
+
+
+
+
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  # get 'signout', to: 'sessions#destroy', as: 'signout'
+
+  resources :sessions, only: [:create, :destroy]
+  # resource :home, only: [:show]
+
+    # root to: "home#show"
+  # end
 
 
 

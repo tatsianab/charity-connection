@@ -12,7 +12,14 @@ module SessionsHelper
     end
 
     def current_user
-        @current_user ||= User.find_by(id: session[:user_id])
+        
+        if !User.find_by(id: session[:user_id])
+            @current_user = GoogleOmniauthTable.find_by(uid: session[:user_id])
+        else
+          @current_user = User.find_by(id: session[:user_id])
+        end
+        # @current_user ||= User.find_by(id: session[:user_id])
+        @current_user
     end
 
     def logged_in?
