@@ -56,15 +56,29 @@
 
 					<li><li><%= link_to "Log Out", logout_path %></li></li>
 				</ul>
-
+				<% if current_cart %>
+					<ul class="nav navbar-nav navbar-right">
+						<%= link_to view_cart_path(current_cart), class: "btn btn-default" do %>
+							<span class = 'fa fa-shopping-cart'> <%= current_cart.line_items.count %> </span>
+						<% end %>
+		 			</ul>
+				<% end %>
 			<% else %>
 				<ul class="nav navbar-nav navbar-right">
 					<li><%= link_to "Log In", login_path %></li>
 					<li><%= link_to 'Sign Up', signup_path  %></li>
 				</ul>
 			<% end %>
-
- 		</ul>
  	</div>
   </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
