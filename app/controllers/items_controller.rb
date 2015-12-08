@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
-			  @items = Item.all
+	    @items = Item.all
            
 	end
 

@@ -1,5 +1,13 @@
 <% @items.each do |item| %>
-	<p><%= link_to "#{item.title}", item_path(item)%></p>
+	<h2><%= link_to "#{item.title}", item_path(item)%></h2>
+	<div class ='row'>
+	   <div class ="col-xs-2">	
+		 <p><img src="<%=item.photo_url%>" width=100px/></p>
+	  </div>
+	  <div class ="col-xs-8">	
+		  <p>Inventory: <%= item.inventory %></p>
+	  </div>
+  </div>
 <% end  %>
    
    

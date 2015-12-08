@@ -94,4 +94,15 @@ Weekend:
 - [] ajax for carts controller
 - [] lazy loader - image, h1, description (adjust schema to add more items)
 
+#Key Features
+- [] advanced active record in models
+- [] more methods in models
+- [] 2 active records methods each
+	-[] highest sale ratio to listings
+	-[] highest ranking charity
+- [] adapters
+- [] view objects
+- [] ajax (cart possibly)
+
+
 

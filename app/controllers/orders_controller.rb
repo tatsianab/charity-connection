@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		binding.pry
 		@user = User.find(session[:user_id])
 		@charity = @user.charity
 		@cart = Cart.where(charity_id: @charity.id).last
