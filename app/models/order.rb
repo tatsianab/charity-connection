@@ -23,4 +23,8 @@ class Order < ActiveRecord::Base
 		end
 	end
 
+	def self.number_of_charities_accepting_donations
+  		select(:charity_id).distinct.count
+  	end
+
 end

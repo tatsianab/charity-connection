@@ -10,4 +10,16 @@ class User < ActiveRecord::Base
 		Object.const_get(organization).create(user_id: user.id)
 	end
 
+	def self.number_of_users
+  		count
+  	end
+
+  	def self.number_of_business_users
+  		joins(:business).count
+  	end
+
+  	def self.number_of_charity_users
+  		joins(:charity).count
+  	end
+
 end
