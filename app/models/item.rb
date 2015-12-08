@@ -68,4 +68,13 @@ class Item < ActiveRecord::Base
 		id_of_highest_ratio_sold = self.highest_ratio_sold
 		Item.find(id_of_highest_ratio_sold).title
 	end
+
+	def self.sort_by_name
+	   self.all.sort_by { |item| item.title }
+	end 
+
+	def capital_letter
+	  self.title.capitalize
+
+	end
 end
