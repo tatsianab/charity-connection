@@ -11,5 +11,5 @@
 <p><img src="<%=@item.photo_url%>"/></p>
 
 <% if current_user.charity %>
-	<%= button_to 'Add to Cart', line_items_path(item_id: @item) %>
+	<%= button_to 'Add to Cart', line_items_path(item_id: @item), remote: true%>
 <% end %>
