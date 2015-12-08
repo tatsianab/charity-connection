@@ -98,8 +98,9 @@ Weekend:
 - [] advanced active record in models
 - [] more methods in models
 - [] 2 active records methods each
-	-[] highest sale ratio to listings
+	-[] highest sale ratio to listings (number ordered/number listed)
 	-[] highest ranking charity
+	-[] list date - order date
 - [] adapters
 - [] view objects
 - [] ajax (cart possibly)

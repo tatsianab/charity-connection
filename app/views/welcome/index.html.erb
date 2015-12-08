@@ -1,3 +1,9 @@
 <h1>Home</h1>
 
+See some of the items charities have accepted from our business partners
+
+<% Item.all_items_sold.each do |item| %>
+	    	<h2><%= item["title"] %></h2> 
+	    	<p><%= item["sum"].to_i %> given away</p>
+	    <% end %>
 
