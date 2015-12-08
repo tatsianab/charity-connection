@@ -1,0 +1,12 @@
+<%=form_for(@user) do |f| %>
+
+<%= render partial: 'users/form_select_organization', locals: {f: f} %>
+
+<%= render partial: 'users/form_organization_account_info', locals: {f: f} %>
+
+
+<div class="actions">
+    <%= f.submit "Sign Up", :class => "btn btn-default"%>
+  </div>
+
+<%end%>
