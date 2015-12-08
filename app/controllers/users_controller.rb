@@ -13,7 +13,6 @@ class UsersController < ApplicationController
 
 	    if @user.save
 	       @user.create_business_or_charity(@user, organization)
-	       binding.pry
 	       log_in(@user)
 	       redirect_to @user
 	    else

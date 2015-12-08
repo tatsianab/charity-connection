@@ -2,8 +2,7 @@ class ItemsController < ApplicationController
 	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
-			  @items = Item.all
-           
+		@items = Item.sort_by_name        
 	end
 
 	def business_items
@@ -18,7 +17,7 @@ class ItemsController < ApplicationController
 
 	def create
 		@item = Item.new(item_params)
-    
+    @item.title = @item.capital_letter
 		if @item.save
 			redirect_to @item
 		else

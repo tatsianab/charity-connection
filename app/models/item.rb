@@ -7,4 +7,11 @@ class Item < ActiveRecord::Base
 	validates_presence_of :title, :inventory, :description, :category_id# :business_id
 
 
+def self.sort_by_name
+   self.all.sort_by { |item| item.title }
+end 
+
+def capital_letter
+  self.title.capitalize
+end
 end
