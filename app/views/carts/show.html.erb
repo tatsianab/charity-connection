@@ -1,7 +1,14 @@
 <h1>My cart</h1>
 <% @current_cart.line_items.each do |line_item| %>
   <h2><%= line_item.item.title %></h2>
-  <p>Inventory: <%= line_item.item.inventory %></p>
-  <% end %>
+  <div class ='row'>
+	   <div class ="col-xs-2">	
+		 <p><img src="<%=line_item.item.photo_url%>" width=100px/></p>
+	  </div>
+	  <div class ="col-xs-8">	
+		  <p>Inventory: <%= line_item.item.inventory %></p>
+	  </div>
+  </div>
+<% end %>
 
-<%= button_to "Checkout", orders_path %>
+<%= button_to "Checkout", orders_path, :class => "btn btn-default" %>

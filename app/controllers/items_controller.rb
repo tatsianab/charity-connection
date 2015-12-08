@@ -2,7 +2,9 @@ class ItemsController < ApplicationController
 	before_action :valid_business?, only: [:new, :create, :edit]
 
 	def index
+
 		@items = Item.sort_by_name        
+
 	end
 
 	def business_items
