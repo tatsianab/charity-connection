@@ -95,14 +95,14 @@ Weekend:
 - [] lazy loader - image, h1, description (adjust schema to add more items)
 
 #Key Features
-- [] advanced active record in models
+- [X] advanced active record in models
 - [] more methods in models
 - [] 2 active records methods each
-	-[] highest sale ratio to listings (number ordered/number listed)
+	-[X] highest sale ratio to listings (number ordered/number listed)
 	-[] highest ranking charity
 	-[] list date - order date
-- [] adapters
-- [] view objects
+- [X] adapters
+- [X] view objects
 - [] ajax (cart possibly)
 
 
